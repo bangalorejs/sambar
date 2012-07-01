@@ -1,0 +1,17 @@
+!!!5
+html
+  head
+    title=event.id
+    link(rel="stylesheet",    href='./css/style.css')
+    link(rel="stylesheet",    href='./css/bootstrap.min.css')
+  body
+    .container
+      .row
+        h1=cfg.name
+        h2=cfg.description
+      .row
+        h1 Sponsored by #{event.sponsor.name}
+        h2=event.sponsor.description
+        p 
+          a(href=event.sponsor.www)
+        

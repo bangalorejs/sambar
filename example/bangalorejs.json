@@ -1,0 +1,17 @@
+{
+    "name"        : "BangaloreJS" 
+  , "description" : "Javascript User Group Meetup"
+  , "events"      : [
+    {
+        "id"      : "first.html"
+      , "sponsor" : {
+          "name"        : "Swissnex India"
+        , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
+        , "www"         : "http://www.swissnexindia.org"
+      }
+    }
+  ]
+  , "stats"       : {
+    "google_analytics"  : ""
+  }
+}
