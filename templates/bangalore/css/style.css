@@ -1,0 +1,84 @@
+.jumbotron {
+     position: relative;
+}
+.jumbotron h1 {
+   margin-bottom: 9px;
+   font-size: 81px;
+   font-weight: bold;
+   letter-spacing: -1px;
+   line-height: 1;
+}
+
+.row {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+.orange {
+  color: #FFA766;
+}
+
+/* widgets */
+.spacer {
+  height: 100px;
+}
+.header {
+  text-align        : center;
+  display           : inline-block;
+  width             : 700px;
+  background-color  : #FF6D00;
+}
+.sponsor {
+  display           : inline-block;
+  width             : 700px;
+}
+.sponsor .left {
+  float   : left;
+  display : table;
+  height  : 150px;
+  width   : 200px;
+}
+.sponsor .right {
+  float       : left;
+  display     : table;
+  text-align  : left;
+  height      : 150px;
+  width       : 500px;
+}
+.sponsor .right span {
+  display         : table-cell;
+  vertical-align  : middle;
+}
+.sponsor .left > span {
+  display         : table-cell;
+  vertical-align  : middle;
+}
+.meetup {
+  text-align        : center;
+  display           : inline-block;
+  width             : 700px;
+  background-color  : #5E5E5E;
+}
+.meetup .left {
+  float   : left;
+  display : table;
+  height  : 150px;
+  width   : 500px;
+}
+.meetup .right {
+  float       : left;
+  display     : table;
+  text-align  : left;
+  height      : 150px;
+  width       : 200px;
+}
+.meetup .right span {
+  display         : table-cell;
+  vertical-align  : middle;
+}
+.meetup .left > span {
+  display         : table-cell;
+  vertical-align  : middle;
+}

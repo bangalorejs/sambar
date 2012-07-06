@@ -63,6 +63,7 @@ function createSiteAt(path) {
     /* Recursively copy static directories. */
     wrench.copyDirSyncRecursive(template+'/css', path+'/css');
     wrench.copyDirSyncRecursive(template+'/js', path+'/js');
+    wrench.copyDirSyncRecursive(template+'/images', path+'/images');
 
     /* Convert index.jade to index.html. */
     var index = jade.compile(fs.readFileSync(template+'/index.jade'))({cfg:cfg});
