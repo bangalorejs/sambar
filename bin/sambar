@@ -5,7 +5,7 @@
  */
 
 var program = require('commander')
-  , jade    = require('jade')
+  , jade    = require('jade')
   , pkg     = require('../package.json')
   , version = pkg.version
   , mkdirp  = require('mkdirp')
@@ -25,7 +25,7 @@ program
   .option('-f, --force',        'Force on non-empty directory')
   .parse(process.argv);
 
-/* Generate site. */
+/* Generate site. */
 
 (function createSite(path) {
   emptyDirectory(path, function(empty){
@@ -58,7 +58,7 @@ function createSiteAt(path) {
 
   mkdir(path, function(){
     var template = program.templatePath;
-    var cfg = require(process.cwd()+'/'+program.configFile);
+    var cfg = require(process.cwd()+'/'+program.configFile);
 
     /* Recursively copy static directories. */
     wrench.copyDirSyncRecursive(template+'/css', path+'/css');
@@ -69,11 +69,26 @@ function createSiteAt(path) {
     var index = jade.compile(fs.readFileSync(template+'/index.jade'))({cfg:cfg});
     fs.writeFileSync( path+'/index.html', index );
 
-    /* Convert index.jade to index.html. */
+    /* Convert event.jade to event.html. */
+
+    var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    function getDate(dd){
+      var d = dd.getDate();
+      if (d === 1 || d === 21 || d === 31)  return d+"st";
+      else if (d === 2 || d === 22)         return d+"nd";
+      else if (d === 3 || d === 23)         return d+"rd";
+      else                                  return d+"th";
+    }
+    function getMinutes(dd){
+      var d = dd.getMinutes();
+      return (d<=9) ? '0'+d : d;
+    }
+
     var event = jade.compile(fs.readFileSync(template+'/event.jade'));
     /* Generate a new page for each event. */
     _.each(cfg.events, function(v){
-      fs.writeFileSync( path+'/'+v.id, event({cfg:cfg, event:v}) ); 
+      fs.writeFileSync( path+'/'+v.id, event({cfg:cfg, event:v, getDate:getDate, getMinutes:getMinutes, dayNames:dayNames, monthNames:monthNames}) ); 
     });
   });
 }

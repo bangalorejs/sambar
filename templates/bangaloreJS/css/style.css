@@ -21,6 +21,20 @@
 }
 
 /* widgets */
+.frame {
+  display: inline-block;
+  margin-left   : 30px;
+  margin-right  : 30px;
+  width         : 640px;
+  text-align: left;
+}
+.separator {
+  display: inline-block;
+  width         : 640px;
+  border-bottom-color: #5E5E5E;
+  border-bottom-size: 3px;
+  border-bottom-style: solid;
+}
 .spacer {
   height: 100px;
 }
@@ -37,15 +51,17 @@
 .sponsor .left {
   float   : left;
   display : table;
-  height  : 150px;
-  width   : 200px;
+  width   : 180px;
+  height            : 150px;
 }
 .sponsor .right {
-  float       : left;
+  float       : right;
   display     : table;
   text-align  : left;
   height      : 150px;
-  width       : 500px;
+  width       : 440px;
+  margin-left : 20px;
+  height      : 150px;
 }
 .sponsor .right span {
   display         : table-cell;
@@ -59,26 +75,49 @@
   text-align        : center;
   display           : inline-block;
   width             : 700px;
+  height      : 200px;
   background-color  : #5E5E5E;
 }
 .meetup .left {
   float   : left;
   display : table;
-  height  : 150px;
-  width   : 500px;
+  text-align  : left;
+  width: 400px;
+  height:200px;
 }
 .meetup .right {
-  float       : left;
+  float       : right;
   display     : table;
-  text-align  : left;
-  height      : 150px;
-  width       : 200px;
+  text-align  : right;
+  text-align  : center;
+  width: 200px;
+  height:200px;
 }
 .meetup .right span {
   display         : table-cell;
   vertical-align  : middle;
+  margin-left     : 30px;
 }
 .meetup .left > span {
   display         : table-cell;
   vertical-align  : middle;
+  margin-left     : 20px;yy
+}
+.meetup .right span img {
+  width: 200px;
+}
+.agenda {
+  display           : inline-block;
+  width             : 700px;
+}
+.speaker {
+  display           : inline-block;
+  width             : 700px;
+}
+.grab_ticket {
+  display           : inline-block;
+  width             : 700px;
+}
+.grab_ticket > span > span {
+  text-align        : center;
 }
