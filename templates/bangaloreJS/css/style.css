@@ -114,6 +114,29 @@
   display           : inline-block;
   width             : 700px;
 }
+.speaker .left {
+  float   : left;
+  display : table;
+  width   : 146px;
+  height  : 146px;
+}
+.speaker .right {
+  float       : right;
+  display     : table;
+  text-align  : left;
+  height      : 146px;
+  width       : 474px;
+  margin-left : 20px;
+  height      : 146px;
+}
+.speaker .right span {
+  display         : table-cell;
+  vertical-align  : middle;
+}
+.speaker .left > span {
+  display         : table-cell;
+  vertical-align  : middle;
+}
 .grab_ticket {
   display           : inline-block;
   width             : 700px;

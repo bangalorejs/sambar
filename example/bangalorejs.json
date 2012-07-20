@@ -19,7 +19,7 @@
       }
       , "agenda"      : [
           { "when": "10:30", "what" : "Gathering and light refreshments."}
-        , { "when": "11:00", "what" : "First talk by "}
+        , { "when": "11:00", "what" : "First talk by #{event.speakers[0].name}"}
         , { "when": "11:30", "what" : "Short break and networking."}
         , { "when": "11:45", "what" : "Second talk by "}
         , { "when": "12:15", "what" : "Short break and networking."}
@@ -29,13 +29,13 @@
       , "speakers"    : [
         {
             "when"      : "11:00"
-          , "name"      : "TBD"
+          , "name"      : "Ramprasad Rajendran"
           , "talk"      : {
-              "title"   : ""
-            , "abstact" : ""
+              "title"   : "Javascript in Social Gaming"
+            , "abstract" : "Preliminary talk title"
           }
-          , "bio"       : ""
-          , "pic"       : ""
+          , "bio"       : "Ram is co-founder at HashCube and is awesome!"
+          , "pic"       : "./images/speakers/ram_146x146.png"
           , "facebook"  : ""
           , "twitter"   : ""
         }  
@@ -44,7 +44,7 @@
           , "name"      : "TBD"
           , "talk"      : {
               "title"   : ""
-            , "abstact" : ""
+            , "abstract" : ""
           }
           , "bio"       : ""
           , "pic"       : ""
@@ -56,7 +56,7 @@
           , "name"      : "TBD"
           , "talk"      : {
               "title"   : ""
-            , "abstact" : ""
+            , "abstract" : ""
           }
           , "bio"       : ""
           , "pic"       : ""

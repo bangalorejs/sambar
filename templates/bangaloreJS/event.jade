@@ -54,7 +54,14 @@ html
         .row 
           .speaker
             span.frame 
-              h1 Speaker: #{v.name}
+              h1 #{v.name}
+              .left
+                span
+                  img(src=v.pic)
+              .right
+                span
+                  h3 #{v.bio}
+            span.frame
               h2=v.talk.title
               p=v.talk.abstract
             span.separator
