@@ -4,9 +4,10 @@
   , "events"      : [
     {
         "id"      : "first.html"
+      , "tickets" : "http://bangalorejs_first.eventbright.com"
       , "when"    : {
-          "start" : "2012/09/01 11:00:00"
-        , "end"   : "2012/09/01 13:00:00"
+          "start" : "2012/08/18 10:30:00"
+        , "end"   : "2012/08/18 13:00:00"
       } 
       , "where"   : {
           "address" : "26 Rest House Crescent Road"
@@ -19,51 +20,53 @@
       }
       , "agenda"      : [
           { "when": "10:30", "what" : "Gathering and light refreshments."}
-        , { "when": "11:00", "what" : "First talk by #{event.speakers[0].name}"}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
         , { "when": "11:30", "what" : "Short break and networking."}
-        , { "when": "11:45", "what" : "Second talk by "}
+        , { "when": "11:45", "what" : "Second talk by ", "speaker_idx":"second"}
         , { "when": "12:15", "what" : "Short break and networking."}
-        , { "when": "12:30", "what" : "Closing talk by "}
+        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
         , { "when": "13:00", "what" : "End."}
       ]
-      , "speakers"    : [
-        {
+      , "speakers"    : {
+        "first": {
             "when"      : "11:00"
           , "name"      : "Ramprasad Rajendran"
           , "talk"      : {
-              "title"   : "Javascript in Social Gaming"
+              "title"   : "Socket.IO in Social Gaming"
             , "abstract" : "Preliminary talk title"
           }
-          , "bio"       : "Ram is co-founder at HashCube and is awesome!"
+          , "bio"       : "Ram is co-founder at HashCube"
           , "pic"       : "./images/speakers/ram_146x146.png"
           , "facebook"  : ""
-          , "twitter"   : ""
+          , "github"    : "rampr"
+          , "twitter"   : "rampr_"
         }  
-        , {
+        , "second" : {
             "when"      : "11:45"
-          , "name"      : "TBD"
+          , "name"      : "Sunil Pai"
           , "talk"      : {
-              "title"   : ""
-            , "abstract" : ""
+              "title"   : "Server-side Javascript with NodeJS"
+            , "abstract" : "Preliminary talk title"
           }
-          , "bio"       : ""
-          , "pic"       : ""
+          , "bio"       : "Sunil is tech lead at Yahoo!"
+          , "pic"       : "./images/speakers/sunil_146x146.png"
           , "facebook"  : ""
-          , "twitter"   : ""
+          , "github"    : "threepointone"
+          , "twitter"   : "threepointone"
         }  
-        , {
+        , "third" : {
             "when"      : "12:30"
-          , "name"      : "TBD"
+          , "name"      : "Sreekanth Vadagiri"
           , "talk"      : {
-              "title"   : ""
-            , "abstract" : ""
+              "title"   : "CouchDB"
+            , "abstract" : "Preliminary talk title"
           }
-          , "bio"       : ""
-          , "pic"       : ""
-          , "facebook"  : ""
-          , "twitter"   : ""
+          , "bio"       : "Sreekanth is developer at ActiveSphere and maker of toolbox.no.de."
+          , "pic"       : "./images/speakers/sreekanth_146x146.jpeg"
+          , "github"    : "sreeix"
+          , "twitter"   : "sreeix"
         }  
-      ]
+      }
     }
   ]
   , "stats"       : {

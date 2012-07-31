@@ -36,10 +36,13 @@ html
                 h2.white When
                 - var start = new Date(event.when.start);
                 - var end = new Date(event.when.end);
-                p.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
+                h3.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
                 h2.white Where
-                p.orange=event.where.address
-                p.orange=event.where.city
+                h3.orange=event.where.address
+                h3.orange=event.where.city
+                h2.white Grab your ticket today: 
+                h3.orange 
+                  a(href=event.tickets) #{event.tickets}
             .right
               span
                 img(src='./images/map.png')
@@ -47,8 +50,12 @@ html
         .agenda
           span.frame
             h1 Agenda
-            - each v in event.agenda
-              p #{v.when} - #{v.what}   
+            - each v, k in event.agenda
+              p 
+                h3
+                  #{v.when} - #{v.what}   
+                  - if (v.speaker_idx)
+                    | #{event.speakers[v.speaker_idx].name}.
           span.separator
       - each v in event.speakers
         .row 
@@ -61,6 +68,12 @@ html
               .right
                 span
                   h3 #{v.bio}
+                  - if (v.twitter)
+                    a(href='http://twitter.com/'+v.twitter,target='_blank')
+                      img(src='./images/twitter.png');
+                  - if (v.github)
+                    a(href='http://github.com/'+v.github,target='_blank')
+                      img(src='./images/github.png');
             span.frame
               h2=v.talk.title
               p=v.talk.abstract
@@ -69,4 +82,5 @@ html
         .grab_ticket
           span.frame
             span
-              h1 Grab your ticket today
+              h1 Grab your ticket today: 
+                a(href=event.tickets) #{event.tickets}
