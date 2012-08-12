@@ -1,5 +1,6 @@
 {
     "name"        : "BangaloreJS" 
+  , "twitter"     : "BangaloreJS"
   , "description" : "Javascript User Group Meetup"
   , "events"      : [
     {
@@ -12,6 +13,7 @@
       , "where"   : {
           "address" : "26 Rest House Crescent Road"
         , "city"    : "Bangalore 560 001"
+        , "map"     : "./images/swissnex_location.png"
       }
       , "sponsor" : {
           "name"        : "Swissnex India"
@@ -32,8 +34,8 @@
             "when"      : "11:00"
           , "name"      : "Ramprasad Rajendran"
           , "talk"      : {
-              "title"   : "Socket.IO in Social Gaming"
-            , "abstract" : "Preliminary talk title"
+              "title"   : "Programming with Socket.IO"
+            , "abstract" : "Realtime communications and multiplayer games are becoming defacto these days and with node.js it has become easy to achieve this on the web. In this talk, Ram will cover a brief introduction of <a href=\"http://socket.io\">Socket.IO</a> and go into a little more depth by demoing a very simple game/app with <a href=\"http://socket.io\">Socket.IO</a>."
           }
           , "bio"       : "Ram is co-founder at HashCube"
           , "pic"       : "./images/speakers/ram_146x146.png"
@@ -45,8 +47,8 @@
             "when"      : "11:45"
           , "name"      : "Sunil Pai"
           , "talk"      : {
-              "title"   : "Server-side Javascript with NodeJS"
-            , "abstract" : "Preliminary talk title"
+              "title"   : "Animating HTML elements for fun and profit"
+            , "abstract" : "Sunil will share some tricks he has learnt in making user interfaces a little more... fun. He'll cover tweening, dynamic tweening, inertia and some common UX patterns. Demos and code shall be had by all." 
           }
           , "bio"       : "Sunil is tech lead at Yahoo!"
           , "pic"       : "./images/speakers/sunil_146x146.png"
@@ -58,8 +60,9 @@
             "when"      : "12:30"
           , "name"      : "Sreekanth Vadagiri"
           , "talk"      : {
-              "title"   : "CouchDB"
-            , "abstract" : "Preliminary talk title"
+              "title"   : "Building Apps with CouchDB and CouchApps"
+            , "abstract" : "In his talk, Sreekanth will look at the architecture of <a href=\"http://couchdb.apache.org\">CouchDB</a> and how it embraces HTTP. Then he will show us a few comparisons with a databases like <a href=\"http://www.mongodb.org\">MongoDB</a>. Finally he will show how to write CouchApps using <a href=\"http://kan.so\">Kanso</a> which fits the whole web application into a database."
+
           }
           , "bio"       : "Sreekanth is developer at ActiveSphere and maker of toolbox.no.de."
           , "pic"       : "./images/speakers/sreekanth_146x146.jpeg"

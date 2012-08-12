@@ -24,7 +24,7 @@ html
             .right
               span
                 h1 Sponsored by #{event.sponsor.name}
-                p=event.sponsor.description
+                p()=event.sponsor.description
                 p 
                   a(href=event.sponsor.www)=event.sponsor.www
       .row
@@ -45,7 +45,9 @@ html
                   a(href=event.tickets) #{event.tickets}
             .right
               span
-                img(src='./images/map.png')
+                a(href=event.where.map)
+                  img(src='./images/map.png')
+                  p Get directions
       .row
         .agenda
           span.frame
@@ -70,13 +72,13 @@ html
                   h3 #{v.bio}
                   - if (v.twitter)
                     a(href='http://twitter.com/'+v.twitter,target='_blank')
-                      img(src='./images/twitter.png');
+                      img(src='./images/twitter.png')
                   - if (v.github)
                     a(href='http://github.com/'+v.github,target='_blank')
-                      img(src='./images/github.png');
+                      img(src='./images/github.png')
             span.frame
               h2=v.talk.title
-              p=v.talk.abstract
+              p!=v.talk.abstract
             span.separator
       .row
         .grab_ticket
@@ -84,3 +86,6 @@ html
             span
               h1 Grab your ticket today: 
                 a(href=event.tickets) #{event.tickets}
+      .row
+        a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
+        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
