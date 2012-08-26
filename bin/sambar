@@ -13,6 +13,8 @@ var program = require('commander')
   , os      = require('os')
   , fs      = require('fs')
   , _       = require('underscore')
+  , gm      = require('gm')
+  , async   = require('async')
   ;
 
 // CLI
@@ -63,41 +65,43 @@ function createSiteAt(path) {
     var re = /^(.*\/).*\.json$/ig;
     var matches = re.exec(program.configFile);
     var cfgPath = matches[1];
-    var images = fs.readdirSync(cfgPath+'images');
-    var imagePaths = [];
-    _.each(images, function(img){
-      imagePaths.push('/eventPics/' + img);
-    });
-    /* Recursively copy static directories. */
-    wrench.copyDirSyncRecursive(template+'/css', path+'/css');
-    wrench.copyDirSyncRecursive(template+'/js', path+'/js');
-    wrench.copyDirSyncRecursive(template+'/images', path+'/images');
-    wrench.copyDirSyncRecursive(cfgPath+'images', path+'/eventPics');
-
-    /* Convert index.jade to index.html. */
-    var index = jade.compile(fs.readFileSync(template+'/index.jade'))({cfg:cfg});
-    fs.writeFileSync( path+'/index.html', index );
-
-    /* Convert event.jade to event.html. */
-
-    var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    function getDate(dd){
-      var d = dd.getDate();
-      if (d === 1 || d === 21 || d === 31)  return d+"st";
-      else if (d === 2 || d === 22)         return d+"nd";
-      else if (d === 3 || d === 23)         return d+"rd";
-      else                                  return d+"th";
+    var images = [];
+    try {
+      images = fs.readdirSync(cfgPath+'images');
+    } catch(err){
+      abort(err);
     }
-    function getMinutes(dd){
-      var d = dd.getMinutes();
-      return (d<=9) ? '0'+d : d;
-    }
+    prepImages(images, cfgPath, path+'/eventPics', function(photos){
+      /* Recursively copy static directories. */
+      wrench.copyDirSyncRecursive(template+'/css', path+'/css');
+      wrench.copyDirSyncRecursive(template+'/js', path+'/js');
+      wrench.copyDirSyncRecursive(template+'/images', path+'/images');
 
-    var event = jade.compile(fs.readFileSync(template+'/event.jade'));
-    /* Generate a new page for each event. */
-    _.each(cfg.events, function(v){
-      fs.writeFileSync( path+'/'+v.id, event({cfg:cfg, images:imagePaths, event:v, getDate:getDate, getMinutes:getMinutes, dayNames:dayNames, monthNames:monthNames}) ); 
+      /* Convert index.jade to index.html. */
+      var index = jade.compile(fs.readFileSync(template+'/index.jade'))({cfg:cfg});
+      fs.writeFileSync( path+'/index.html', index );
+
+      /* Convert event.jade to event.html. */
+
+      var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      function getDate(dd){
+        var d = dd.getDate();
+        if (d === 1 || d === 21 || d === 31)  return d+"st";
+        else if (d === 2 || d === 22)         return d+"nd";
+        else if (d === 3 || d === 23)         return d+"rd";
+        else                                  return d+"th";
+      }
+      function getMinutes(dd){
+        var d = dd.getMinutes();
+        return (d<=9) ? '0'+d : d;
+      }
+
+      var event = jade.compile(fs.readFileSync(template+'/event.jade'));
+      /* Generate a new page for each event. */
+      _.each(cfg.events, function(v){
+        fs.writeFileSync( path+'/'+v.id, event({cfg:cfg, images:photos, event:v, getDate:getDate, getMinutes:getMinutes, dayNames:dayNames, monthNames:monthNames}) ); 
+      });
     });
   });
 }
@@ -112,6 +116,60 @@ function emptyDirectory(path, cb) {
   fs.readdir(path, function(err, files){
     if (err && 'ENOENT' != err.code) throw err;
     cb(!files || !files.length);
+  });
+}
+
+
+/**
+ * Prepare resized images and thumbnails.
+ *
+ * @param {Table} images
+ * @param {String} path
+ * @param {Function} cb
+ */
+function prepImages(images, sourcePath, destPath, cb) {
+  var tasks = [];
+  _.each(images, function(img){
+    /* Save thumbnail paths. */
+    var tbPath = '/eventPics/tb_' + img;
+    var modalPath = '/eventPics/mod_' + img;
+    tasks.push(function(cb){
+      var curPath = sourcePath+'images/'+img;
+      gm(curPath).autoOrient().quality(100).write(curPath, function(err){
+        if (err) {cb(err);}
+        gm(curPath).identify(function(err, features){
+          if (err) {cb(err);}
+          //console.log('features',features);
+          var width = features.size.width;
+          var height = features.size.height;
+          //console.log("original size: " + width + "x"+height);
+          /* Compute img size for thumbnail and modal. */
+          var tbwidth = (width > 163) ? 163 : width;
+          var tbheight  = (height*tbwidth) / width;
+          var w = (width > 800) ? 800 : width;
+          height  = (height*w) / width;
+          //console.log("tb:" + tbwidth + 'x' + tbheight + ' modal: '+ width + 'x' + height);
+          /* Actual thumbnail resize. */
+          gm(curPath).resize(tbwidth, tbheight).quality(90).write(destPath+'/tb_'+img, function(err){
+
+            if (err) {cb(err);}
+            /* Actual modal resize. */
+            gm(curPath).resize(width, height).quality(90).write(destPath+'/mod_'+img, function(err){
+              if (err) {cb(err);}
+              var photo = {
+                thumbnail: tbPath,
+                modal:     modalPath,
+              };
+              cb(null, photo);
+            });
+          }); 
+        });
+      });
+    });
+  });
+  async.parallel(tasks, function(err, results){
+    if (err) abort(err);
+    cb(results);
   });
 }
 

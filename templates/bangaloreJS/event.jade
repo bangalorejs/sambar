@@ -51,15 +51,21 @@ html
                   img(src='./images/map.png')
                   p Get directions
 
-      - if (images.length > 0)
+      - if (images.length)
         .row
           .pictures
-            span.frame
-              h1 Pictures
-              ul
+            ul
+              - var cnt = 0;
               - each i in images
-                li #{i}
-                  img(src=i)
+                - if (cnt%4 === 3)
+                  li.first
+                    a(href=i.modal)
+                      img(src=i.thumbnail)
+                - else 
+                  li
+                    a(href=i.modal)
+                      img(src=i.thumbnail)
+                - ++cnt
       .row
         .agenda
           span.frame

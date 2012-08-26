@@ -109,6 +109,23 @@ p {
 .meetup .right span img {
   width: 200px;
 }
+.pictures {
+  text-align        : center;
+  display           : inline-block;
+  width             : 700px;
+}
+.pictures ul {
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+.pictures li {
+  float: right;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+.pictures li.first {
+  margin-left: 0;
+}
 .agenda {
   display           : inline-block;
   width             : 700px;
