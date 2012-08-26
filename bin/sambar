@@ -71,6 +71,7 @@ function createSiteAt(path) {
     } catch(err){
       abort(err);
     }
+    /* Resize and save images. */
     prepImages(images, cfgPath, path+'/eventPics', function(photos){
       /* Recursively copy static directories. */
       wrench.copyDirSyncRecursive(template+'/css', path+'/css');

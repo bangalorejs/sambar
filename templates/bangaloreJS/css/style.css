@@ -119,12 +119,12 @@ p {
   margin: 0 0 0 0;
 }
 .pictures li {
-  float: right;
-  margin-left: 16px;
+  float: left;
+  margin-right: 16px;
   margin-top: 16px;
 }
 .pictures li.first {
-  margin-left: 0;
+  margin-right: 0;
 }
 .agenda {
   display           : inline-block;

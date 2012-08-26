@@ -66,6 +66,20 @@ html
                     a(href=i.modal)
                       img(src=i.thumbnail)
                 - ++cnt
+
+      - if (event.videos.length)
+        .row
+          .pictures
+            ul
+              - var cnt = 0;
+              - each v in event.videos
+                - if (cnt%2 === 1)
+                  li.first
+                    iframe(width=v.width, height=v.height, src=v.url, frameborder="0", allowfullscreen)
+                - else 
+                  li
+                    iframe(width=v.width, height=v.height, src=v.url, frameborder="0", allowfullscreen)
+                - ++cnt
       .row
         .agenda
           span.frame
