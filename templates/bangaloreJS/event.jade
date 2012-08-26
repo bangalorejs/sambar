@@ -36,18 +36,29 @@ html
                 h2.white When
                 - var start = new Date(event.when.start);
                 - var end = new Date(event.when.end);
+                - var current = new Date();
                 h3.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
                 h2.white Where
                 h3.orange=event.where.address
                 h3.orange=event.where.city
-                h2.white Grab your ticket today: 
-                h3.orange 
-                  a(href=event.tickets) #{event.tickets}
+                if current < start
+                  h2.white Grab your ticket today: 
+                  h3.orange 
+                    a(href=event.tickets) #{event.tickets}
             .right
               span
                 a(href=event.where.map)
                   img(src='./images/map.png')
                   p Get directions
+      - if (images.length > 0)
+        .row
+          .pictures
+            span.frame
+              h1 Pictures
+              ul
+              - each i in images
+                li #{i}
+                  img(src=i)
       .row
         .agenda
           span.frame
@@ -81,11 +92,12 @@ html
               p!=v.talk.abstract
             span.separator
       .row
-        .grab_ticket
-          span.frame
-            span
-              h1 Grab your ticket today: 
-                a(href=event.tickets) #{event.tickets}
+        if current < start
+          .grab_ticket
+            span.frame
+              span
+                h1 Grab your ticket today: 
+                  a(href=event.tickets) #{event.tickets}
       .row
         a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
         script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
