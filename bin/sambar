@@ -59,11 +59,20 @@ function createSiteAt(path) {
   mkdir(path, function(){
     var template = program.templatePath;
     var cfg = require(process.cwd()+'/'+program.configFile);
-
+    /* Get images if any. */
+    var re = /^(.*\/).*\.json$/ig;
+    var matches = re.exec(program.configFile);
+    var cfgPath = matches[1];
+    var images = fs.readdirSync(cfgPath+'images');
+    var imagePaths = [];
+    _.each(images, function(img){
+      imagePaths.push('/eventPics/' + img);
+    });
     /* Recursively copy static directories. */
     wrench.copyDirSyncRecursive(template+'/css', path+'/css');
     wrench.copyDirSyncRecursive(template+'/js', path+'/js');
     wrench.copyDirSyncRecursive(template+'/images', path+'/images');
+    wrench.copyDirSyncRecursive(cfgPath+'images', path+'/eventPics');
 
     /* Convert index.jade to index.html. */
     var index = jade.compile(fs.readFileSync(template+'/index.jade'))({cfg:cfg});
@@ -88,7 +97,7 @@ function createSiteAt(path) {
     var event = jade.compile(fs.readFileSync(template+'/event.jade'));
     /* Generate a new page for each event. */
     _.each(cfg.events, function(v){
-      fs.writeFileSync( path+'/'+v.id, event({cfg:cfg, event:v, getDate:getDate, getMinutes:getMinutes, dayNames:dayNames, monthNames:monthNames}) ); 
+      fs.writeFileSync( path+'/'+v.id, event({cfg:cfg, images:imagePaths, event:v, getDate:getDate, getMinutes:getMinutes, dayNames:dayNames, monthNames:monthNames}) ); 
     });
   });
 }

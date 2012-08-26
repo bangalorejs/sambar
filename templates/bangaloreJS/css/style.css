@@ -9,8 +9,13 @@
    line-height: 1;
 }
 
+p {
+  font-size: 18px;
+}
+
 .row {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .white {
@@ -30,7 +35,7 @@
 }
 .separator {
   display: inline-block;
-  width         : 640px;
+  width         : 700px;
   border-bottom-color: #5E5E5E;
   border-bottom-size: 3px;
   border-bottom-style: solid;
@@ -75,7 +80,6 @@
   text-align        : center;
   display           : inline-block;
   width             : 700px;
-  height            : 270px;
   background-color  : #5E5E5E;
 }
 .meetup .left {
@@ -88,10 +92,9 @@
 .meetup .right {
   float       : right;
   display     : table;
-  text-align  : right;
   text-align  : center;
   width: 200px;
-  height:200px;
+  height:250px;
 }
 .meetup .right span {
   display         : table-cell;
