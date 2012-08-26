@@ -73,6 +73,10 @@ function createSiteAt(path) {
     }
     /* Resize and save images. */
     prepImages(images, cfgPath, path+'/eventPics', function(photos){
+      /* Order event pictures by name. */
+      photos = _.sortBy(photos, function(photo){
+        return photo.name;
+      });
       /* Recursively copy static directories. */
       wrench.copyDirSyncRecursive(template+'/css', path+'/css');
       wrench.copyDirSyncRecursive(template+'/js', path+'/js');
@@ -158,6 +162,7 @@ function prepImages(images, sourcePath, destPath, cb) {
             gm(curPath).resize(width, height).quality(90).write(destPath+'/mod_'+img, function(err){
               if (err) {cb(err);}
               var photo = {
+                name: img,
                 thumbnail: tbPath,
                 modal:     modalPath,
               };
