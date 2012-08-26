@@ -80,21 +80,26 @@ p {
   text-align        : center;
   display           : inline-block;
   width             : 700px;
+  height            : 300px;
   background-color  : #5E5E5E;
+}
+.meetup .frame {
+  display: table;
+  height: 100%;
 }
 .meetup .left {
   float   : left;
   display : table;
   text-align  : left;
   width: 400px;
-  height:200px;
+  height:100%;
 }
 .meetup .right {
   float       : right;
   display     : table;
   text-align  : center;
   width: 200px;
-  height:250px;
+  height:100%;
 }
 .meetup .right span {
   display         : table-cell;
@@ -108,6 +113,9 @@ p {
 }
 .meetup .right span img {
   width: 200px;
+}
+.meetup .right span p {
+  margin: 5px 0 0 0;
 }
 .agenda {
   display           : inline-block;
