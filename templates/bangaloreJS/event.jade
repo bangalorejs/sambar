@@ -23,7 +23,7 @@ html
                 img(src='./images/swissnex.png')
             .right
               span
-                h1 Sponsored by #{event.sponsor.name}
+                h2 Sponsored by #{event.sponsor.name}
                 p()=event.sponsor.description
                 p 
                   a(href=event.sponsor.www)=event.sponsor.www
@@ -32,15 +32,15 @@ html
           span.frame
             .left
               span
-                h1.orange #{cfg.name} Meetup
-                h2.white When
+                h2.orange #{cfg.name} Meetup
+                h3.white When
                 - var start = new Date(event.when.start);
                 - var end = new Date(event.when.end);
                 - var current = new Date();
-                h3.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
-                h2.white Where
-                h3.orange=event.where.address
-                h3.orange=event.where.city
+                h4.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
+                h3.white Where
+                h4.orange=event.where.address
+                h4.orange=event.where.city
                 if current < start
                   h2.white Grab your ticket today: 
                   h3.orange 
@@ -58,34 +58,38 @@ html
               - each i in images
                 - if (cnt%4 === 3)
                   li.first
-                    a(href=i.modal)
+                    a(href=i.modal,onclick='return showPic("'+i.modal+'");')
                       img(src=i.thumbnail)
                 - else 
                   li
-                    a(href=i.modal)
+                    a(href=i.modal,onclick='return showPic("'+i.modal+'");')
                       img(src=i.thumbnail)
                 - ++cnt
 
       - if (event.videos.length)
         .row
-          .pictures
+          .videos
             ul
               - var cnt = 0;
               - each v in event.videos
                 - if (cnt%2 === 1)
                   li.first
-                    iframe(width=v.width, height=v.height, src=v.url, frameborder="0", allowfullscreen)
+                    a(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
+                      img(width="342px",height="256px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
+                      img.play(src="./images/play.png")
                 - else 
                   li
-                    iframe(width=v.width, height=v.height, src=v.url, frameborder="0", allowfullscreen)
+                    a(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
+                      img(width="342px",height="256px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
+                      img.play(src="./images/play.png")
                 - ++cnt
       .row
         .agenda
           span.frame
-            h1 Agenda
+            h2 Agenda
             - each v, k in event.agenda
               p 
-                h3
+                h4
                   #{v.when} - #{v.what}   
                   - if (v.speaker_idx)
                     | #{event.speakers[v.speaker_idx].name}.
@@ -94,13 +98,13 @@ html
         .row 
           .speaker
             span.frame 
-              h1 #{v.name}
+              h2 #{v.name}
               .left
                 span
                   img(src=v.pic)
               .right
                 span
-                  h3 #{v.bio}
+                  h4 #{v.bio}
                   - if (v.twitter)
                     a(href='http://twitter.com/'+v.twitter,target='_blank')
                       img(src='./images/twitter.png')
@@ -108,7 +112,7 @@ html
                     a(href='http://github.com/'+v.github,target='_blank')
                       img(src='./images/github.png')
             span.frame
-              h2=v.talk.title
+              h3=v.talk.title
               p!=v.talk.abstract
             span.separator
       .row
@@ -116,8 +120,28 @@ html
           .grab_ticket
             span.frame
               span
-                h1 Grab your ticket today: 
+                h2 Grab your ticket today: 
                   a(href=event.tickets) #{event.tickets}
       .row
         a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
         script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        #pic_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+          .modal-body
+            img(width="800px",height="531px")
+        #vid_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+          .modal-body
+            iframe(width="530px",height="342px",frameborder="0",allowfullscreen)
+      .row.spacer
+      script(src="./js/jquery.min.js") 
+      script(src="./js/bootstrap.min.js") 
+      script
+        function showPic(p) {
+          $('#pic_modal img').attr({src:p});
+          $('#pic_modal').modal();
+          return false;
+        }
+        function showVid(p) {
+          $('#vid_modal iframe').attr({src:"http://youtube.com/embed/"+p+"?autoplay=1"});
+          $('#vid_modal').modal();
+          return false;
+        }

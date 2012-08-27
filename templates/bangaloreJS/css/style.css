@@ -41,7 +41,7 @@ p {
   border-bottom-style: solid;
 }
 .spacer {
-  height: 100px;
+  height: 40px;
 }
 .header {
   text-align        : center;
@@ -134,6 +134,24 @@ p {
 .pictures li.first {
   margin-right: 0;
 }
+.videos {
+  text-align        : center;
+  display           : inline-block;
+  width             : 700px;
+}
+.videos ul {
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+.videos li {
+  float: left;
+  margin-right: 16px;
+  margin-top: 16px;
+  margin-bottom:-44px;
+}
+.videos li.first {
+  margin-right: 0;
+}
 .agenda {
   display           : inline-block;
   width             : 700px;
@@ -171,4 +189,16 @@ p {
 }
 .grab_ticket > span > span {
   text-align        : center;
+}
+#pic_modal {
+  display:none;
+}
+#vid_modal {
+  display:none;
+}
+.play{
+  display:block;
+  position:relative;
+  top:-151px;
+  right:-148px;
 }

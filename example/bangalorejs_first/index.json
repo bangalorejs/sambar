@@ -20,12 +20,7 @@
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
       }
-      , "videos"      : [
-          {"width" : "342", "height" : "192", "url" : "http://www.youtube.com/embed/GEm6dhxJN3I"}
-        , {"width" : "342", "height" : "192", "url" : "http://www.youtube.com/embed/vni861al2xA"}
-        , {"width" : "342", "height" : "192", "url" : "http://www.youtube.com/embed/jXn4fLRCXZA"}
-        , {"width" : "342", "height" : "192", "url" : "http://www.youtube.com/embed/EBDHN3roMiQ"}
-      ]
+      , "videos"      : ["GEm6dhxJN3I", "vni861al2xA", "jXn4fLRCXZA", "EBDHN3roMiQ"]
       , "agenda"      : [
           { "when": "10:30", "what" : "Gathering and light refreshments."}
         , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
