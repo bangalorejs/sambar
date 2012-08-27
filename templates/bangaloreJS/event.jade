@@ -11,28 +11,34 @@ html
       .row.spacer
       .row
         .header.jumbotron
-          h1
-            span.white=cfg.name
-          h2
-            span.white=cfg.description
+          .left
+            span
+              img(src='./images/logo.png',width='210px',height='210px')
+          .right
+            span
+              a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
+              script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
       .row
         .sponsor
           span.frame
-            .left
-              span
-                img(src='./images/swissnex.png')
-            .right
-              span
-                h2 Sponsored by #{event.sponsor.name}
-                p()=event.sponsor.description
-                p 
-                  a(href=event.sponsor.www)=event.sponsor.www
+            span.event_sponsor
+              p Sponsor
+              a(href=event.sponsor.www,target='_blank')
+                img(height='72px',width='361px',src='./images/swissnex.png')
+            span.event_organization
+              p Organization
+              a(href='http://minsh.net',target='_blank')
+                img(width='72px',height='72px',src='./images/minsh.logo.png')
+            span.event_support
+              p Support
+              a(href='http://hasgeek.com',target='_blank')
+                img(width='96px',height='72px',src='./images/hasgeek.logo.png')
       .row
         .meetup
           span.frame
+            h2.orange #{cfg.description}
             .left
               span
-                h2.orange #{cfg.name} Meetup
                 h3.white When
                 - var start = new Date(event.when.start);
                 - var end = new Date(event.when.end);
@@ -42,9 +48,9 @@ html
                 h4.orange=event.where.address
                 h4.orange=event.where.city
                 if current < start
-                  h2.white Grab your ticket today: 
-                  h3.orange 
-                    a(href=event.tickets) #{event.tickets}
+                  h3.white Grab your ticket today: 
+                  h4.orange 
+                    a(href=event.tickets,target="_blank") #{event.tickets}
             .right
               span
                 a(href=event.where.map)
@@ -93,7 +99,8 @@ html
                   #{v.when} - #{v.what}   
                   - if (v.speaker_idx)
                     | #{event.speakers[v.speaker_idx].name}.
-          span.separator
+      .row
+        span.separator
       - each v in event.speakers
         .row 
           .speaker
@@ -114,6 +121,7 @@ html
             span.frame
               h3=v.talk.title
               p!=v.talk.abstract
+        .row
             span.separator
       .row
         if current < start
@@ -121,16 +129,13 @@ html
             span.frame
               span
                 h2 Grab your ticket today: 
-                  a(href=event.tickets) #{event.tickets}
-      .row
-        a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
-        script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-        #pic_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
-          .modal-body
-            img(width="800px",height="531px")
-        #vid_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
-          .modal-body
-            iframe(width="530px",height="342px",frameborder="0",allowfullscreen)
+                  a(href=event.tickets,target='_blank') #{event.tickets}
+      #pic_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+        .modal-body
+          img(width="800px",height="531px")
+      #vid_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
+        .modal-body
+          iframe(width="530px",height="342px",frameborder="0",allowfullscreen)
       .row.spacer
       script(src="./js/jquery.min.js") 
       script(src="./js/bootstrap.min.js") 
