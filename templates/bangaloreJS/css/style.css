@@ -117,6 +117,23 @@ p {
 .meetup .right span p {
   margin: 5px 0 0 0;
 }
+.pictures {
+  text-align        : center;
+  display           : inline-block;
+  width             : 700px;
+}
+.pictures ul {
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+.pictures li {
+  float: left;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+.pictures li.first {
+  margin-right: 0;
+}
 .agenda {
   display           : inline-block;
   width             : 700px;
