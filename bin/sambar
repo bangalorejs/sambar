@@ -9,7 +9,7 @@ var program = require('commander')
   , pkg     = require('../package.json')
   , version = pkg.version
   , mkdirp  = require('mkdirp')
-  , wrench  = require('wrench')
+  , copyDir = require('wrench').copyDirSyncRecursive
   , os      = require('os')
   , fs      = require('fs')
   , _       = require('underscore')
@@ -21,7 +21,7 @@ var program = require('commander')
 
 program
   .version(version)
-  .option('-c, --configFile [file]', 'Config file')
+  .option('-c, --configPath [path]', 'Config path')
   .option('-t, --templatePath [path]', 'Template path')
   .option('-o, --outputDir [path]',    'Output directory')
   .option('-f, --force',        'Force on non-empty directory')
@@ -58,57 +58,61 @@ function createSiteAt(path) {
     console.log('   bye');
   });
 
-  mkdir(path, function(){
-    var template = program.templatePath;
-    var cfg = require(process.cwd()+'/'+program.configFile);
-    /* Get images if any. */
-    var re = /^(.*\/).*\.json$/ig;
-    var matches = re.exec(program.configFile);
-    var cfgPath = matches[1];
+  /* Create output directory. */
+  if (!mkdir(path)) return false;
+
+  /* Get JSON config. */
+  var cfg = require(process.cwd()+'/'+program.configPath+'/index.json');
+  /* Recursively copy static directories. */
+  copyDir(program.templatePath+'/css', path+'/css');
+  copyDir(program.templatePath+'/js', path+'/js');
+  copyDir(program.templatePath+'/images', path+'/images');
+
+  /* Convert index.jade to index.html. */
+  var indexFile = jade.compile(fs.readFileSync(program.templatePath+'/index.jade'))({cfg:cfg});
+  fs.writeFileSync( path+'/index.html', indexFile );
+
+  /* Compile event.jade. */
+  var createEventMarkup = jade.compile(fs.readFileSync(program.templatePath+'/event.jade'));
+
+  /* Generate a new page for each event. */
+  _.each(cfg.events, function(v){
+    /* Copy images. */
+    mkdir(path+'/'+v.id);
+    copyDir(program.configPath+'/'+v.id+'/images', path+'/'+v.id+'/images');
+    /* Make gallery if any images. */
+    var imagesSrcPath = program.configPath+'/'+v.id+'/gallery';
     var images = [];
     try {
-      images = fs.readdirSync(cfgPath+'images');
-    } catch(err){
-      abort(err);
-    }
+      images = fs.readdirSync(imagesSrcPath);
+    } catch(e) {}
     /* Resize and save images. */
-    prepImages(images, cfgPath, path+'/eventPics', function(photos){
+    var imagesDestPath = path+'/'+v.id+'/gallery';
+    mkdir(imagesDestPath);
+    prepImages(images, imagesSrcPath, imagesDestPath, function(photos){
       /* Order event pictures by name. */
-      photos = _.sortBy(photos, function(photo){
-        return photo.name;
-      });
-      /* Recursively copy static directories. */
-      wrench.copyDirSyncRecursive(template+'/css', path+'/css');
-      wrench.copyDirSyncRecursive(template+'/js', path+'/js');
-      wrench.copyDirSyncRecursive(template+'/images', path+'/images');
-
-      /* Convert index.jade to index.html. */
-      var index = jade.compile(fs.readFileSync(template+'/index.jade'))({cfg:cfg});
-      fs.writeFileSync( path+'/index.html', index );
-
-      /* Convert event.jade to event.html. */
-
-      var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      function getDate(dd){
-        var d = dd.getDate();
-        if (d === 1 || d === 21 || d === 31)  return d+"st";
-        else if (d === 2 || d === 22)         return d+"nd";
-        else if (d === 3 || d === 23)         return d+"rd";
-        else                                  return d+"th";
-      }
-      function getMinutes(dd){
-        var d = dd.getMinutes();
-        return (d<=9) ? '0'+d : d;
-      }
-
-      var event = jade.compile(fs.readFileSync(template+'/event.jade'));
-      /* Generate a new page for each event. */
-      _.each(cfg.events, function(v){
-        fs.writeFileSync( path+'/'+v.id, event({cfg:cfg, images:photos, event:v, getDate:getDate, getMinutes:getMinutes, dayNames:dayNames, monthNames:monthNames}) ); 
-      });
-    });
-  });
+      photos = _.sortBy(photos, function(p){ return p.name });
+      /* Create event file. */
+      fs.writeFileSync( path+'/'+v.id+'.html', createEventMarkup({
+         cfg:cfg
+       , images:photos
+       , event:v
+       , getDate:function(dd){
+         var d = dd.getDate();
+         if (d === 1 || d === 21 || d === 31)  return d+"st";
+         else if (d === 2 || d === 22)         return d+"nd";
+         else if (d === 3 || d === 23)         return d+"rd";
+         else                                  return d+"th";
+       }
+       , getMinutes:function(dd){
+         var d = dd.getMinutes();
+         return (d<=9) ? '0'+d : d;
+       }
+       , dayNames:["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+       , monthNames:["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+     })); 
+   });
+ });
 }
 
 /**
@@ -128,39 +132,38 @@ function emptyDirectory(path, cb) {
 /**
  * Prepare resized images and thumbnails.
  *
- * @param {Table} images
+ * @param {Array} images
  * @param {String} path
  * @param {Function} cb
  */
 function prepImages(images, sourcePath, destPath, cb) {
-  var tasks = [];
+  var tasks = [];
   _.each(images, function(img){
     /* Save thumbnail paths. */
-    var tbPath = '/eventPics/tb_' + img;
-    var modalPath = '/eventPics/mod_' + img;
+    var tbPath = 'tb_' + img;
+    var modalPath = 'mod_' + img;
     tasks.push(function(cb){
-      var curPath = sourcePath+'images/'+img;
+      var curPath = sourcePath+'/'+img;
       gm(curPath).autoOrient().quality(100).write(curPath, function(err){
-        if (err) {cb(err);}
+        if (err) return cb(err);
         gm(curPath).identify(function(err, features){
-          if (err) {cb(err);}
+          if (err) return cb(err);
           //console.log('features',features);
           var width = features.size.width;
           var height = features.size.height;
           //console.log("original size: " + width + "x"+height);
           /* Compute img size for thumbnail and modal. */
-          var tbwidth = (width > 163) ? 163 : width;
+          var tbwidth = (width > 163) ? 163 : width;
           var tbheight  = (height*tbwidth) / width;
-          var w = (width > 800) ? 800 : width;
+          var w = (width > 800) ? 800 : width;
           height  = (height*w) / width;
           //console.log("tb:" + tbwidth + 'x' + tbheight + ' modal: '+ width + 'x' + height);
           /* Actual thumbnail resize. */
           gm(curPath).resize(tbwidth, tbheight).quality(90).write(destPath+'/tb_'+img, function(err){
-
-            if (err) {cb(err);}
+            if (err) return cb(err);
             /* Actual modal resize. */
             gm(curPath).resize(width, height).quality(90).write(destPath+'/mod_'+img, function(err){
-              if (err) {cb(err);}
+              if (err) return cb(err);
               var photo = {
                 name: img,
                 thumbnail: tbPath,
@@ -183,14 +186,12 @@ function prepImages(images, sourcePath, destPath, cb) {
  * Mkdir -p.
  *
  * @param {String} path
- * @param {Function} cb
  */
-function mkdir(path, cb) {
-  mkdirp(path, 0755, function(err){
-    if (err) throw err;
+function mkdir(path) {
+  var r = mkdirp.sync(path, 0755);
+  if (!r) 
     console.log('   \033[36mcreate\033[0m : ' + path);
-    cb && cb();
-  });
+  return r;
 }
 
 /**

@@ -24,15 +24,15 @@ html
             span.event_sponsor
               p Sponsor
               a(href=event.sponsor.www,target='_blank')
-                img(height='72px',width='361px',src='./images/swissnex.png')
+                img(height='72px',width='361px',src=event.id+'/images/sponsors/swissnex.png')
             span.event_organization
               p Organization
               a(href='http://minsh.net',target='_blank')
-                img(width='72px',height='72px',src='./images/minsh.logo.png')
+                img(width='72px',height='72px',src=event.id+'/images/sponsors/minsh.logo.png')
             span.event_support
               p Support
               a(href='http://hasgeek.com',target='_blank')
-                img(width='96px',height='72px',src='./images/hasgeek.logo.png')
+                img(width='96px',height='72px',src=event.id+'/images/sponsors/hasgeek.logo.png')
       .row
         .meetup
           span.frame
@@ -53,8 +53,8 @@ html
                     a(href=event.tickets,target="_blank") #{event.tickets}
             .right
               span
-                a(href=event.where.map)
-                  img(src='./images/map.png')
+                a(href=event.id+'/'+event.where.map)
+                  img(src=event.id+'/images/venue/map.png')
                   p Get directions
       - if (images.length > 0)
         .row
@@ -64,12 +64,12 @@ html
               - each i in images
                 - if (cnt%4 === 3)
                   li.first
-                    a(href=i.modal,onclick='return showPic("'+i.modal+'");')
-                      img(src=i.thumbnail)
+                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                      img(src=event.id+'/gallery/'+i.thumbnail)
                 - else 
                   li
-                    a(href=i.modal,onclick='return showPic("'+i.modal+'");')
-                      img(src=i.thumbnail)
+                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                      img(src=event.id+'/gallery/'+i.thumbnail)
                 - ++cnt
 
       - if (event.videos.length)
@@ -108,7 +108,7 @@ html
               h2 #{v.name}
               .left
                 span
-                  img(src=v.pic)
+                  img(src=event.id+'/'+v.pic)
               .right
                 span
                   h4 #{v.bio}

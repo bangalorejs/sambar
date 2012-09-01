@@ -4,7 +4,76 @@
   , "description" : "Javascript User Group Meetup"
   , "events"      : [
     {
-        "id"      : "first.html"
+        "id"      : "second"
+      , "tickets" : "http://bangalorejs_second.eventbright.com"
+      , "when"    : {
+          "start" : "2012/09/15 10:30:00"
+        , "end"   : "2012/09/15 13:00:00"
+      } 
+      , "where"   : {
+          "address" : "26 Rest House Crescent Road"
+        , "city"    : "Bangalore 560 001"
+        , "map"     : "./images/venue/swissnex_location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Swissnex India"
+        , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
+        , "www"         : "http://www.swissnexindia.org"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Short break and networking."}
+        , { "when": "11:45", "what" : "Second talk by ", "speaker_idx":"second"}
+        , { "when": "12:15", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
+        , { "when": "13:00", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "Raviteja Dodda"
+          , "talk"      : {
+              "title"   : "Backbone.JS"
+            , "abstract" : "Preliminary talk title."
+          }
+          , "bio"       : "Raviteja is co-founder at Pipal Tech Ventures"
+          , "pic"       : "./images/speakers/raviteja_146x146.png"
+          , "facebook"  : ""
+          , "github"    : "raviteja2007"
+          , "twitter"   : "raviteja2007"
+        }  
+        , "second" : {
+            "when"      : "11:45"
+          , "name"      : "Pranil Dasika"
+          , "talk"      : {
+              "title"   : "Node.JS App Authentification with Passport.JS"
+            , "abstract" : "Preliminary talk title." 
+          }
+          , "bio"       : "Pranil is a Node.JS Freelancer"
+          , "pic"       : "./images/speakers/pranil_146x146.png"
+          , "facebook"  : ""
+          , "github"    : "pranildasika"
+          , "twitter"   : "pranil_dasika"
+        }  
+        , "third" : {
+            "when"      : "12:30"
+          , "name"      : "Rajasekharan Vengalil"
+          , "talk"      : {
+              "title"   : "Javascript Gotchas"
+            , "abstract" : "Preliminary talk title."
+
+          }
+          , "bio"       : "Raj is Technical Evangelist at Microsoft"
+          , "pic"       : "./images/speakers/raj_146x146.png"
+          , "github"    : "avranju"
+          , "twitter"   : "avranju"
+        }  
+      }
+    },
+    {
+        "id"      : "first"
       , "tickets" : "http://bangalorejs_first.eventbright.com"
       , "when"    : {
           "start" : "2012/08/18 10:30:00"
@@ -13,7 +82,7 @@
       , "where"   : {
           "address" : "26 Rest House Crescent Road"
         , "city"    : "Bangalore 560 001"
-        , "map"     : "./images/swissnex_location.png"
+        , "map"     : "./images/venue/swissnex_location.png"
       }
       , "sponsor" : {
           "name"        : "Swissnex India"
