@@ -20,14 +20,46 @@ html
     .container
       .row.spacer
       .row
+        .navbar
+          .navbar-inner
+            ul.nav
+              - each v in cfg.events
+                - var vdate = new Date(v.when.start);
+                  if (v.id === event.id)
+                    li.active
+                      a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
+                  else
+                    li
+                      a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
+      .row
         .header.jumbotron
           .left
             span
               img(src='./images/logo.png',width='210px',height='210px')
           .right
-            span
-              a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
-              script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            span.event_sponsor
+              p Sponsored by
+              a(href=event.sponsor.www,target='_blank')
+                img(height=event.sponsor.pic.height,width=event.sponsor.pic.width,src=event.id+'/'+event.sponsor.pic.path)
+      .row
+        span
+          a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
+          script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      - if (images.length > 0)
+        .row
+          .pictures
+            ul
+              - var cnt = 0;
+              - each i in images
+                - if (cnt%4 === 3)
+                  li.first
+                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                      img(src=event.id+'/gallery/'+i.thumbnail)
+                - else 
+                  li
+                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                      img(src=event.id+'/gallery/'+i.thumbnail)
+                - ++cnt
       .row
         .meetup
           span.frame
@@ -54,16 +86,12 @@ html
       .row
         .sponsor
           span.frame
-            span.event_sponsor
-              p Sponsor
-              a(href=event.sponsor.www,target='_blank')
-                img(height=event.sponsor.pic.height,width=event.sponsor.pic.width,src=event.id+'/'+event.sponsor.pic.path)
             span.event_organization
-              p Organization
+              p Organized by
               a(href=event.organization.www,target='_blank')
                 img(width=event.organization.pic.width,height=event.organization.pic.height,src=event.id+'/'+event.organization.pic.path)
             span.event_support
-              p Support
+              p Supported by
               a(href=event.support.www,target='_blank')
                 img(width=event.support.pic.width,height=event.support.pic.height,src=event.id+'/'+event.support.pic.path)
       - if (event.videos.length)
@@ -82,21 +110,6 @@ html
                     a(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
                       img(width="342px",height="256px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
                       img.play(src="./images/play.png")
-                - ++cnt
-      - if (images.length > 0)
-        .row
-          .pictures
-            ul
-              - var cnt = 0;
-              - each i in images
-                - if (cnt%4 === 3)
-                  li.first
-                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
-                      img(src=event.id+'/gallery/'+i.thumbnail)
-                - else 
-                  li
-                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
-                      img(src=event.id+'/gallery/'+i.thumbnail)
                 - ++cnt
       .row
         .agenda
