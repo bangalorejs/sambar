@@ -166,8 +166,8 @@ p {
 }
 .pictures li {
   float: left;
-  margin-right: 16px;
-  margin-top: 16px;
+  margin-right: 4px;
+  margin-top: 4px;
 }
 .pictures li.first {
   margin-right: 0;
@@ -183,9 +183,8 @@ p {
 }
 .videos li {
   float: left;
-  margin-right: 16px;
-  margin-top: 16px;
-  margin-bottom:-44px;
+  margin-right: 4px;
+  margin-top: 4px;
 }
 .videos li.first {
   margin-right: 0;
@@ -234,9 +233,10 @@ p {
 #vid_modal {
   display:none;
 }
-.play{
-  display:block;
-  position:relative;
-  top:-151px;
-  right:-148px;
+.thumbnail > div{
+  position: absolute;
+  display: block;
+  margin-top:-150px;
+  width:348px;
+  height:100%;
 }

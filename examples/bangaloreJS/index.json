@@ -69,16 +69,16 @@
         }  
         , "second" : {
             "when"      : "11:45"
-          , "name"      : "Sandya Mannarswamy (to be confirmed)"
+          , "name"      : "You?"
           , "talk"      : {
-              "title"   : "Javascript Engine Internals"
-            , "abstract" : "Preliminary talk title. Coming soon." 
+              "title"   : "Wanted: speaker"
+            , "abstract" : "" 
           }
-          , "bio"       : "Sandya is Researcher at IBM"
-          , "pic"       : "./images/speakers/sandya_146x146.png"
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/johndoe_146x146.png"
           , "facebook"  : ""
-          , "github"    : "sandyasm"
-          , "twitter"   : "sandyasm"
+          , "github"    : ""
+          , "twitter"   : ""
         }  
         , "third" : {
             "when"      : "12:30"

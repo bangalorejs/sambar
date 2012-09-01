@@ -53,11 +53,11 @@ html
               - each i in images
                 - if (cnt%4 === 3)
                   li.first
-                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                    a.thumbnail(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
                       img(src=event.id+'/gallery/'+i.thumbnail)
                 - else 
                   li
-                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                    a.thumbnail(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
                       img(src=event.id+'/gallery/'+i.thumbnail)
                 - ++cnt
       .row
@@ -102,14 +102,16 @@ html
               - each v in event.videos
                 - if (cnt%2 === 1)
                   li.first
-                    a(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
-                      img(width="342px",height="256px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
-                      img.play(src="./images/play.png")
+                    a.thumbnail(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
+                      img(width="338px",height="253px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
+                      div
+                        img(src="./images/play.png")
                 - else 
                   li
-                    a(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
-                      img(width="342px",height="256px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
-                      img.play(src="./images/play.png")
+                    a.thumbnail(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
+                      img(width="338px",height="253px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
+                      div
+                        img(src="./images/play.png")
                 - ++cnt
       .row
         .agenda
