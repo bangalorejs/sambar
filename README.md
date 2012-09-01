@@ -22,7 +22,7 @@ Sambar helps you create a static site for your next event.
 
 Here is how to create the bangalorejs site:
 
-    ./bin/sambar -c example/bangalorejs.json -t templates/bangaloreJS -o site
+    ./bin/sambar -c examples/bangaloreJS -t templates/bangaloreJS -o site
 
 # Inspiration
   
