@@ -1,7 +1,7 @@
 !!!5
 html
   head
-    title=event.id
+    title #{event.id} meetup | BangaloreJS
     link(rel="stylesheet",    href='./css/style.css')
     link(rel="stylesheet",    href='./css/bootstrap.min.css')
     script
@@ -16,7 +16,7 @@ html
       })();
   body
     a(href='https://github.com/minsh/sambar')
-      img(style='position:absolute;top:0;right:0;border:0;',src='./images/forkme.png',alt='Fork me on GitHub')
+      img(style='position:absolute;top:1;right:0;border:0;',src='./images/forkme.png',alt='Fork me on GitHub')
     .container
       .row.spacer
       .row
@@ -66,22 +66,6 @@ html
                 a(href=event.id+'/'+event.where.map)
                   img(src=event.id+'/images/venue/map.png')
                   p Get directions
-      - if (images.length > 0)
-        .row
-          .pictures
-            ul
-              - var cnt = 0;
-              - each i in images
-                - if (cnt%4 === 3)
-                  li.first
-                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
-                      img(src=event.id+'/gallery/'+i.thumbnail)
-                - else 
-                  li
-                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
-                      img(src=event.id+'/gallery/'+i.thumbnail)
-                - ++cnt
-
       - if (event.videos.length)
         .row
           .videos
@@ -98,6 +82,21 @@ html
                     a(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
                       img(width="342px",height="256px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
                       img.play(src="./images/play.png")
+                - ++cnt
+      - if (images.length > 0)
+        .row
+          .pictures
+            ul
+              - var cnt = 0;
+              - each i in images
+                - if (cnt%4 === 3)
+                  li.first
+                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                      img(src=event.id+'/gallery/'+i.thumbnail)
+                - else 
+                  li
+                    a(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                      img(src=event.id+'/gallery/'+i.thumbnail)
                 - ++cnt
       .row
         .agenda
