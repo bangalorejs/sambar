@@ -140,35 +140,31 @@ function prepImages(images, sourcePath, destPath, cb) {
     var modalPath = '/eventPics/mod_' + img;
     tasks.push(function(cb){
       var curPath = sourcePath+'images/'+img;
-      gm(curPath).autoOrient().quality(100).write(curPath, function(err){
+      gm(curPath).identify(function(err, features){
         if (err) {cb(err);}
-        gm(curPath).identify(function(err, features){
+        //console.log('features',features);
+        var width = features.size.width;
+        var height = features.size.height;
+        //console.log("original size: " + width + "x"+height);
+        /* Compute img size for thumbnail and modal. */
+        var tbwidth = (width > 163) ? 163 : width;
+        var tbheight  = (height*tbwidth) / width;
+        var w = (width > 800) ? 800 : width;
+        height  = (height*w) / width;
+        //console.log("tb:" + tbwidth + 'x' + tbheight + ' modal: '+ width + 'x' + height);
+        /* Actual thumbnail resize. */
+        gm(curPath).resize(tbwidth, tbheight).quality(90).write(destPath+'/tb_'+img, function(err){
           if (err) {cb(err);}
-          //console.log('features',features);
-          var width = features.size.width;
-          var height = features.size.height;
-          //console.log("original size: " + width + "x"+height);
-          /* Compute img size for thumbnail and modal. */
-          var tbwidth = (width > 163) ? 163 : width;
-          var tbheight  = (height*tbwidth) / width;
-          var w = (width > 800) ? 800 : width;
-          height  = (height*w) / width;
-          //console.log("tb:" + tbwidth + 'x' + tbheight + ' modal: '+ width + 'x' + height);
-          /* Actual thumbnail resize. */
-          gm(curPath).resize(tbwidth, tbheight).quality(90).write(destPath+'/tb_'+img, function(err){
-
+          /* Actual modal resize. */
+          gm(curPath).resize(width, height).quality(90).write(destPath+'/mod_'+img, function(err){
             if (err) {cb(err);}
-            /* Actual modal resize. */
-            gm(curPath).resize(width, height).quality(90).write(destPath+'/mod_'+img, function(err){
-              if (err) {cb(err);}
-              var photo = {
-                name: img,
-                thumbnail: tbPath,
-                modal:     modalPath,
-              };
-              cb(null, photo);
-            });
-          }); 
+            var photo = {
+              name: img,
+              thumbnail: tbPath,
+              modal:     modalPath,
+            };
+            cb(null, photo);
+          });
         });
       });
     });
