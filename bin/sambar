@@ -59,7 +59,7 @@ function createSiteAt(path) {
   });
 
   /* Create output directory. */
-  if (!mkdir(path)) return false;
+  mkdir(path);
 
   /* Get JSON config. */
   var cfg = require(process.cwd()+'/'+program.configPath+'/index.json');
