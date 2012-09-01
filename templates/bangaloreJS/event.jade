@@ -20,18 +20,6 @@ html
     .container
       .row.spacer
       .row
-        .navbar
-          .navbar-inner
-            ul.nav
-              - each v in cfg.events
-                - var vdate = new Date(v.when.start);
-                if (v.id === event.id)
-                  li.active
-                    a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
-                else
-                  li
-                    a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
-      .row
         .header.jumbotron
           .left
             span
@@ -40,21 +28,6 @@ html
             span
               a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
               script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-      .row
-        .sponsor
-          span.frame
-            span.event_sponsor
-              p Sponsor
-              a(href=event.sponsor.www,target='_blank')
-                img(height='72px',width='361px',src=event.id+'/images/sponsors/swissnex.png')
-            span.event_organization
-              p Organization
-              a(href='http://minsh.net',target='_blank')
-                img(width='72px',height='72px',src=event.id+'/images/sponsors/minsh.logo.png')
-            span.event_support
-              p Support
-              a(href='http://hasgeek.com',target='_blank')
-                img(width='96px',height='72px',src=event.id+'/images/sponsors/hasgeek.logo.png')
       .row
         .meetup
           span.frame
@@ -78,6 +51,21 @@ html
                 a(href=event.id+'/'+event.where.map)
                   img(src=event.id+'/images/venue/map.png')
                   p Get directions
+      .row
+        .sponsor
+          span.frame
+            span.event_sponsor
+              p Sponsor
+              a(href=event.sponsor.www,target='_blank')
+                img(height=event.sponsor.pic.height,width=event.sponsor.pic.width,src=event.id+'/'+event.sponsor.pic.path)
+            span.event_organization
+              p Organization
+              a(href=event.organization.www,target='_blank')
+                img(width=event.organization.pic.width,height=event.organization.pic.height,src=event.id+'/'+event.organization.pic.path)
+            span.event_support
+              p Support
+              a(href=event.support.www,target='_blank')
+                img(width=event.support.pic.width,height=event.support.pic.height,src=event.id+'/'+event.support.pic.path)
       - if (event.videos.length)
         .row
           .videos

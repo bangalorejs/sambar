@@ -17,8 +17,31 @@
       }
       , "sponsor" : {
           "name"        : "Swissnex India"
+        , "pic"         : {
+            "path"    : "./images/sponsors/swissnex.png"
+          , "width"   : "361px"
+          , "height"  : "72px" 
+        }
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.hasgeek.com"
+      }
+      , "support": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/hasgeek.logo.png"
+          , "width"   : "96px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
       }
       , "videos"      : []
       , "agenda"      : [
@@ -86,8 +109,29 @@
       }
       , "sponsor" : {
           "name"        : "Swissnex India"
+        , "pic"         : {
+            "path"  : "./images/sponsors/swissnex.png"
+          , "width"   : "361px"
+          , "height"  : "72px" 
+        }
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+      }
+      , "support": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/hasgeek.logo.png"
+          , "width"   : "96px"
+          , "height"  : "72px"
+        }
       }
       , "videos"      : ["GEm6dhxJN3I", "vni861al2xA", "jXn4fLRCXZA", "EBDHN3roMiQ"]
       , "agenda"      : [
