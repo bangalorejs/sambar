@@ -10,6 +10,18 @@ html
     .container
       .row.spacer
       .row
+        .navbar
+          .navbar-inner
+            ul.nav
+              - each v in cfg.events
+                - var vdate = new Date(v.when.start);
+                if (v.id === event.id)
+                  li.active
+                    a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
+                else
+                  li
+                    a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
+      .row
         .header.jumbotron
           .left
             span
