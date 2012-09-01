@@ -82,7 +82,7 @@ function createSiteAt(path) {
     copyDir(program.configPath+'/'+v.id+'/images', path+'/'+v.id+'/images');
     /* Make gallery if any images. */
     var imagesSrcPath = program.configPath+'/'+v.id+'/gallery';
-    var images = [];
+    var images = [];
     try {
       images = fs.readdirSync(imagesSrcPath);
     } catch(e) {}
@@ -143,7 +143,7 @@ function prepImages(images, sourcePath, destPath, cb) {
     var tbPath = 'tb_' + img;
     var modalPath = 'mod_' + img;
     tasks.push(function(cb){
-      var curPath = sourcePath+'images/'+img;
+      var curPath = sourcePath+'/'+img;
       gm(curPath).identify(function(err, features){
         if (err) {cb(err);}
         //console.log('features',features);
@@ -157,10 +157,10 @@ function prepImages(images, sourcePath, destPath, cb) {
         height  = (height*w) / width;
         //console.log("tb:" + tbwidth + 'x' + tbheight + ' modal: '+ width + 'x' + height);
         /* Actual thumbnail resize. */
-        gm(curPath).resize(tbwidth, tbheight).quality(90).write(destPath+'/tb_'+img, function(err){
+        gm(curPath).resize(tbwidth, tbheight).quality(100).write(destPath+'/tb_'+img, function(err){
           if (err) {cb(err);}
           /* Actual modal resize. */
-          gm(curPath).resize(width, height).quality(90).write(destPath+'/mod_'+img, function(err){
+          gm(curPath).resize(width, height).quality(100).write(destPath+'/mod_'+img, function(err){
             if (err) {cb(err);}
             var photo = {
               name: img,

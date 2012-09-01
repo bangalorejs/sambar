@@ -36,7 +36,7 @@
           , "name"      : "Raviteja Dodda"
           , "talk"      : {
               "title"   : "Backbone.JS"
-            , "abstract" : "Preliminary talk title."
+            , "abstract" : "Preliminary talk title. Coming soon."
           }
           , "bio"       : "Raviteja is co-founder at Pipal Tech Ventures"
           , "pic"       : "./images/speakers/raviteja_146x146.png"
@@ -46,23 +46,23 @@
         }  
         , "second" : {
             "when"      : "11:45"
-          , "name"      : "Pranil Dasika"
+          , "name"      : "Sandya Mannarswamy (to be confirmed)"
           , "talk"      : {
-              "title"   : "Node.JS App Authentification with Passport.JS"
-            , "abstract" : "Preliminary talk title." 
+              "title"   : "Javascript Engine Internals"
+            , "abstract" : "Preliminary talk title. Coming soon." 
           }
-          , "bio"       : "Pranil is a Node.JS Freelancer"
-          , "pic"       : "./images/speakers/pranil_146x146.png"
+          , "bio"       : "Sandya is Researcher at IBM"
+          , "pic"       : "./images/speakers/sandya_146x146.png"
           , "facebook"  : ""
-          , "github"    : "pranildasika"
-          , "twitter"   : "pranil_dasika"
+          , "github"    : "sandyasm"
+          , "twitter"   : "sandyasm"
         }  
         , "third" : {
             "when"      : "12:30"
           , "name"      : "Rajasekharan Vengalil"
           , "talk"      : {
               "title"   : "Javascript Gotchas"
-            , "abstract" : "Preliminary talk title."
+            , "abstract" : "Preliminary talk title. Coming soon."
 
           }
           , "bio"       : "Raj is Technical Evangelist at Microsoft"
