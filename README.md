@@ -1,7 +1,11 @@
-sambar
+Sambar
 ======
 
-Sambar helps you create a static site for your next event.
+Sambar helps you create a static web site for your community vertical, i.e., it takes care of creating the next meetup event page while showing previous meetup pictures and videos.
+
+# Prerequisites
+
+    node v0.6.19+
 
 # Install
 
