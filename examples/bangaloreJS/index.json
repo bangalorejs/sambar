@@ -5,7 +5,7 @@
   , "events"      : [
     {
         "id"      : "second"
-      , "tickets" : "http://bangalorejs_second.eventbright.com"
+      , "tickets" : "http://bangalorejs_second.eventbrite.com"
       , "when"    : {
           "start" : "2012/09/15 10:30:00"
         , "end"   : "2012/09/15 13:00:00"
@@ -58,10 +58,10 @@
             "when"      : "11:00"
           , "name"      : "Raviteja Dodda"
           , "talk"      : {
-              "title"   : "Backbone.JS"
-            , "abstract" : "Preliminary talk title. Coming soon."
+              "title"   : "Pros and Cons of Developing a Thick Client-side App"
+            , "abstract" : "Preliminary talk title. More coming soon."
           }
-          , "bio"       : "Raviteja is co-founder at Pipal Tech Ventures"
+          , "bio"       : "Ravi is Co-founder at Pipal Tech Ventures"
           , "pic"       : "./images/speakers/raviteja_146x146.png"
           , "facebook"  : ""
           , "github"    : "raviteja2007"
@@ -69,13 +69,13 @@
         }  
         , "second" : {
             "when"      : "11:45"
-          , "name"      : "You?"
+          , "name"      : "Sameer Segal"
           , "talk"      : {
-              "title"   : "Wanted: speaker"
-            , "abstract" : "" 
+              "title"   : "Data-driven Web Apps with D3.js and Backbone.js"
+            , "abstract" : "Preliminary talk title. More coming soon." 
           }
-          , "bio"       : ""
-          , "pic"       : "./images/speakers/johndoe_146x146.png"
+          , "bio"       : "Sameer is Founder & CEO at Artoo"
+          , "pic"       : "./images/speakers/sameer_146x146.png"
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
@@ -84,8 +84,8 @@
             "when"      : "12:30"
           , "name"      : "Rajasekharan Vengalil"
           , "talk"      : {
-              "title"   : "Javascript Gotchas"
-            , "abstract" : "Preliminary talk title. Coming soon."
+              "title"   : "Javascript 'Gotchas'"
+            , "abstract" : "Preliminary talk title. More coming soon."
 
           }
           , "bio"       : "Raj is Technical Evangelist at Microsoft"
@@ -97,7 +97,7 @@
     },
     {
         "id"      : "first"
-      , "tickets" : "http://bangalorejs_first.eventbright.com"
+      , "tickets" : "http://bangalorejs_first.eventbrite.com"
       , "when"    : {
           "start" : "2012/08/18 10:30:00"
         , "end"   : "2012/08/18 13:00:00"
@@ -153,7 +153,7 @@
               "title"   : "Programming with Socket.IO"
             , "abstract" : "Realtime communications and multiplayer games are becoming defacto these days and with node.js it has become easy to achieve this on the web. In this talk, Ram will cover a brief introduction of <a href=\"http://socket.io\">Socket.IO</a> and go into a little more depth by demoing a very simple game/app with <a href=\"http://socket.io\">Socket.IO</a>."
           }
-          , "bio"       : "Ram is co-founder at HashCube"
+          , "bio"       : "Ram is Co-founder at HashCube"
           , "pic"       : "./images/speakers/ram_146x146.png"
           , "facebook"  : ""
           , "github"    : "rampr"
@@ -163,10 +163,10 @@
             "when"      : "11:45"
           , "name"      : "Sunil Pai"
           , "talk"      : {
-              "title"   : "Animating HTML elements for fun and profit"
+              "title"   : "Animating HTML Elements for Fun and Profit"
             , "abstract" : "Sunil will share some tricks he has learnt in making user interfaces a little more... fun. He'll cover tweening, dynamic tweening, inertia and some common UX patterns. Demos and code shall be had by all." 
           }
-          , "bio"       : "Sunil is tech lead at Yahoo!"
+          , "bio"       : "Sunil is Tech Lead at Yahoo!"
           , "pic"       : "./images/speakers/sunil_146x146.png"
           , "facebook"  : ""
           , "github"    : "threepointone"
@@ -180,7 +180,7 @@
             , "abstract" : "In his talk, Sreekanth will look at the architecture of <a href=\"http://couchdb.apache.org\">CouchDB</a> and how it embraces HTTP. Then he will show us a few comparisons with a databases like <a href=\"http://www.mongodb.org\">MongoDB</a>. Finally he will show how to write CouchApps using <a href=\"http://kan.so\">Kanso</a> which fits the whole web application into a database."
 
           }
-          , "bio"       : "Sreekanth is developer at ActiveSphere and maker of toolbox.no.de."
+          , "bio"       : "Sreekanth is Developer at ActiveSphere and maker of toolbox.no.de."
           , "pic"       : "./images/speakers/sreekanth_146x146.jpeg"
           , "github"    : "sreeix"
           , "twitter"   : "sreeix"
