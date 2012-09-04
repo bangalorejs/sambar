@@ -11,7 +11,8 @@
         , "end"   : "2012/09/15 13:00:00"
       } 
       , "where"   : {
-          "address" : "26 Rest House Crescent Road"
+          "address_1" : "SwissnexIndia"
+        , "address_2" : "26 Rest House Crescent Road"
         , "city"    : "Bangalore 560 001"
         , "map"     : "./images/venue/swissnex_location.png"
       }
@@ -103,7 +104,8 @@
         , "end"   : "2012/08/18 13:00:00"
       } 
       , "where"   : {
-          "address" : "26 Rest House Crescent Road"
+          "address_1" : "SwissnexIndia"
+        , "address_2" : "26 Rest House Crescent Road"
         , "city"    : "Bangalore 560 001"
         , "map"     : "./images/venue/swissnex_location.png"
       }
