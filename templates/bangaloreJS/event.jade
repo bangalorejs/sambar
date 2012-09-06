@@ -4,6 +4,14 @@ html
     title #{event.id} meetup | BangaloreJS
     link(rel="stylesheet",    href='./css/style.css')
     link(rel="stylesheet",    href='./css/bootstrap.min.css')
+
+    meta(property="og:title",content="BangaloreJS ~ #{event.id} meetup")
+    meta(property="og:type",content="website")
+    meta(property="og:image",content="http://#{cfg.domain}/images/logo.png")
+    meta(property="og:description",content=cfg.description)
+    meta(property="og:url",content="http://#{cfg.domain}/#{event.id}.html") 
+    meta(property="og:site_name",content=cfg.name)
+
     script
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-34497453-1']);

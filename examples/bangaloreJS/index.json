@@ -2,6 +2,7 @@
     "name"        : "BangaloreJS" 
   , "twitter"     : "BangaloreJS"
   , "description" : "Javascript User Group Meetup"
+  , "domain"      : "www.bangalorejs.org"
   , "events"      : [
     {
         "id"      : "second"
