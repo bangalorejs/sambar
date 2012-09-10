@@ -12,7 +12,7 @@
         , "end"   : "2012/09/15 13:00:00"
       } 
       , "where"   : {
-          "address_1" : "SwissnexIndia"
+          "address_1" : "Swissnex India"
         , "address_2" : "26 Rest House Crescent Road"
         , "city"    : "Bangalore 560 001"
         , "map"     : "./images/venue/swissnex_location.png"
@@ -37,10 +37,10 @@
         , "www"       : "http://www.minsh.net"
       }
       , "support": {
-          "name"        : "Minsh"
+          "name"        : "HasGeek"
         , "pic"         : {
             "path"    : "./images/sponsors/hasgeek.logo.png"
-          , "width"   : "96px"
+          , "width"  : "96px"
           , "height"  : "72px"
         }
         , "www"       : "http://www.hasgeek.com"
@@ -61,7 +61,7 @@
           , "name"      : "Raviteja Dodda"
           , "talk"      : {
               "title"   : "Pros and Cons of Developing a Thick Client-side App"
-            , "abstract" : "Preliminary talk title. More coming soon."
+            , "abstract" : "In this talk, Ravi will talk about why and when we should use rendering and templating on the client-side rather than onthe server-side to develop a web app. Then he'll demonstrate the DelightCircle web app, which is centered around Backbone.js using Mustache.js templating, and some unique hacks!"
           }
           , "bio"       : "Ravi is Co-founder at Pipal Tech Ventures"
           , "pic"       : "./images/speakers/raviteja_146x146.png"
@@ -74,9 +74,9 @@
           , "name"      : "Sameer Segal"
           , "talk"      : {
               "title"   : "Data-driven Web Apps with D3.js and Backbone.js"
-            , "abstract" : "Preliminary talk title. More coming soon." 
+            , "abstract" : "D3.js is amazing and very well documented but it takes some time to get the hang of it. Backbone.js is popular but its quite easy to get lost. Just when you get past these hurdles and you think you have a chart and a backbone app you're going to discover how hard it is to link them up. Welcome to backbone-d3! Sameer will cover everything from the basics to developing a working app. He will also show us the realtime dashboard he has made for his web app." 
           }
-          , "bio"       : "Sameer is Founder & CEO at Artoo"
+          , "bio"       : "Sameer is Founder & CEO at Artoo"
           , "pic"       : "./images/speakers/sameer_146x146.png"
           , "facebook"  : ""
           , "github"    : ""
@@ -86,8 +86,8 @@
             "when"      : "12:30"
           , "name"      : "Rajasekharan Vengalil"
           , "talk"      : {
-              "title"   : "Javascript 'Gotchas'"
-            , "abstract" : "Preliminary talk title. More coming soon."
+              "title"   : "Javascript Gotchas"
+            , "abstract" : "JavaScript is a powerful, general purpose, Turing complete programming language. But that doesn’t mean that it does not come with its own special set of warts that can trip you up if you aren’t on the lookout. In this talk Raj will take a look at those parts of the language that tend to be somewhat counterintuitive such as variable scope/variable hoisting, prototypes, declarations and more as time permits."
 
           }
           , "bio"       : "Raj is Technical Evangelist at Microsoft"
@@ -105,7 +105,7 @@
         , "end"   : "2012/08/18 13:00:00"
       } 
       , "where"   : {
-          "address_1" : "SwissnexIndia"
+          "address_1" : "Swissnex India"
         , "address_2" : "26 Rest House Crescent Road"
         , "city"    : "Bangalore 560 001"
         , "map"     : "./images/venue/swissnex_location.png"
