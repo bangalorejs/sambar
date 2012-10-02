@@ -168,10 +168,11 @@ html
           img(width="800px",height="531px")
       #vid_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
         .modal-body
-          iframe(width="530px",height="342px",frameborder="0",allowfullscreen)
+          #vid_frame
       .row.spacer
       script(src="./js/jquery.min.js") 
       script(src="./js/bootstrap.min.js") 
+      script(src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js") 
       script
         function showPic(p) {
           $('#pic_modal img').attr({src:p});
@@ -179,7 +180,24 @@ html
           return false;
         }
         function showVid(p) {
-          $('#vid_modal iframe').attr({src:"http://youtube.com/embed/"+p+"?autoplay=1"});
+          //https://developers.google.com/youtube/js_api_reference#Examples
+          var params = { allowScriptAccess: "always" };
+          var atts = { id: "myytplayer" };
+          swfobject.embedSWF("http://www.youtube.com/v/"+p+"?enablejsapi=1&playerapiid=ytplayer&version=3",
+                                   "vid_frame", "530", "342", "8", null, null, params, atts);
+
           $('#vid_modal').modal();
+          $('#vid_modal').on('hidden', function() {
+            //sometimes video won't be loaded, handle that
+            try {
+              $("#myytplayer").get(0).stopVideo();
+            } catch(e) {
+            }
+            //is there a better way?
+            $("#vid_modal .modal-body").html("<div id='vid_frame'></div>");
+          });
           return false;
+        }
+        function onYouTubePlayerReady(playerId) {
+          $("#myytplayer").get(0).playVideo();
         }
