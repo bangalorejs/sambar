@@ -240,3 +240,6 @@ p {
   width:348px;
   height:100%;
 }
+.carousel-control{
+  cursor: pointer;
+}
