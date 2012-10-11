@@ -61,11 +61,11 @@ html
               - each i in images
                 - if (cnt%4 === 3)
                   li.first
-                    a.thumbnail(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                    a.thumbnail(href=i.modal,onclick='return showPic("'+cnt+'");')
                       img(src=event.id+'/gallery/'+i.thumbnail)
                 - else 
                   li
-                    a.thumbnail(href=i.modal,onclick='return showPic("'+event.id+'/gallery/'+i.modal+'");')
+                    a.thumbnail(href=i.modal,onclick='return showPic("'+cnt+'");')
                       img(src=event.id+'/gallery/'+i.thumbnail)
                 - ++cnt
       .row
@@ -165,6 +165,10 @@ html
                   a(href=event.tickets,target='_blank') #{event.tickets}
       #pic_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
         .modal-body
+          .carousel-control.left(onclick='return showLR("left");')
+            &lsaquo;
+          .carousel-control.right(onclick='return showLR("right");')
+            &rsaquo;
           img(width="800px",height="531px")
       #vid_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
         .modal-body
@@ -174,9 +178,28 @@ html
       script(src="./js/bootstrap.min.js") 
       script(src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js") 
       script
-        function showPic(p) {
+        //couldn't avoid these globals
+        var images = !{JSON.stringify(images)};
+        var event_id = !{"'"+event.id+"'"};
+        function showPic(pos) {
+          var p = event_id+'/gallery/'+images[pos].modal;
           $('#pic_modal img').attr({src:p});
           $('#pic_modal').modal();
+          setNavs(pos);
+          return false;
+        }
+        function setNavs(pos) {
+          var len = images.length;
+          pos = parseInt(pos,10);
+          var prev = (pos==0)?len-1:pos-1;
+          var next = (pos==len-1)?0:pos+1;
+          $('.carousel-control.left').attr({'data-pos':prev});
+          $('.carousel-control.right').attr({'data-pos':next});
+        }
+        //show prev or next pic. lr is either 'left' or 'right'
+        function showLR(lr) {
+          var pos = parseInt($('.carousel-control.'+lr).attr('data-pos'),10);
+          showPic(pos);
           return false;
         }
         function showVid(p) {
