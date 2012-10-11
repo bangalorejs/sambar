@@ -168,6 +168,8 @@ p {
   float: left;
   margin-right: 4px;
   margin-top: 4px;
+  width : 172px;
+  height : 118px;
 }
 .pictures li.first {
   margin-right: 0;
@@ -229,6 +231,11 @@ p {
 }
 #pic_modal {
   display:none;
+  width:680px;
+  margin-left:-350px;
+}
+#pic_modal .modal-body {
+  max-height:600px;
 }
 #vid_modal {
   display:none;
@@ -240,6 +247,13 @@ p {
   width:348px;
   height:100%;
 }
-.carousel-control{
+#pic_modal .carousel-control{
   cursor: pointer;
+  top:50%;
+}
+#pic_modal .carousel-control.right{
+  right: 23px;
+}
+#pic_modal .carousel-control.left{
+  left: 23px;
 }
