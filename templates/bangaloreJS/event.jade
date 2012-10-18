@@ -14,7 +14,7 @@ html
 
     script
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-34497453-1']);
+      _gaq.push(['_setAccount', '#{cfg.stats.google_analytics}']);
       _gaq.push(['_setDomainName', 'bangalorejs.org']);
       _gaq.push(['_trackPageview']);
       (function() {
@@ -50,9 +50,16 @@ html
               a(href=event.sponsor.www,target='_blank')
                 img(height=event.sponsor.pic.height,width=event.sponsor.pic.width,src=event.id+'/'+event.sponsor.pic.path)
       .row
-        span
-          a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
-          script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          - if (cfg.twitter)
+            span.twitter
+              a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
+              script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          -if (cfg.googlegroup)
+            span.googlegroup #{cfg.title} 
+              form.form-horizontal(action='http://groups.google.com/group/'+cfg.googlegroup+'/boxsubscribe')
+                a.element(href="https://groups.google.com/forum/#!forum/"+cfg.googlegroup) Google Group
+                input.element.input-medium(type='text',name='email',placeholder='Your email')
+                input.element.btn.btn-primary.btn-small(type='submit',name="sub",value="Subscribe")
       - if (images.length > 0)
         .row
           .pictures
@@ -103,7 +110,7 @@ html
               p Supported by
               a(href=event.support.www,target='_blank')
                 img(width=event.support.pic.width,height=event.support.pic.height,src=event.id+'/'+event.support.pic.path)
-      - if (event.videos.length)
+      - if (event.videos && event.videos.length)
         .row
           .videos
             ul
@@ -122,40 +129,47 @@ html
                       div
                         img(src="./images/play.png")
                 - ++cnt
-      .row
-        .agenda
-          span.frame
-            h2 Agenda
-            - each v, k in event.agenda
-              p 
-                h4
-                  #{v.when} - #{v.what}   
-                  - if (v.speaker_idx)
-                    | #{event.speakers[v.speaker_idx].name}.
-      .row
-        span.separator
-      - each v in event.speakers
-        .row 
-          .speaker
-            span.frame 
-              h2 #{v.name}
-              .left
-                span
-                  img(src=event.id+'/'+v.pic)
-              .right
-                span
-                  h4 #{v.bio}
-                  - if (v.twitter)
-                    a(href='http://twitter.com/'+v.twitter,target='_blank')
-                      img(src='./images/twitter.png')
-                  - if (v.github)
-                    a(href='http://github.com/'+v.github,target='_blank')
-                      img(src='./images/github.png')
-            span.frame
-              h3=v.talk.title
-              p!=v.talk.abstract
+      - if (event.agenda)
         .row
-            span.separator
+          .agenda
+            span.frame
+              h2 Agenda
+              - each v, k in event.agenda
+                p 
+                  h4
+                    #{v.when} - #{v.what}   
+                    - if (v.speaker_idx)
+                      | #{event.speakers[v.speaker_idx].name}.
+      - else
+        .row
+          .agenda
+            span.frame
+              h2.center Agenda coming soon : )
+      - if (event.speakers)
+        .row
+          span.separator
+        - each v in event.speakers
+          .row 
+            .speaker
+              span.frame 
+                h2 #{v.name}
+                .left
+                  span
+                    img(src=event.id+'/'+v.pic)
+                .right
+                  span
+                    h4 #{v.bio}
+                    - if (v.twitter)
+                      a(href='http://twitter.com/'+v.twitter,target='_blank')
+                        img(src='./images/twitter.png')
+                    - if (v.github)
+                      a(href='http://github.com/'+v.github,target='_blank')
+                        img(src='./images/github.png')
+              span.frame
+                h3=v.talk.title
+                p!=v.talk.abstract
+          .row
+              span.separator
       .row
         if current < start
           .grab_ticket
