@@ -127,6 +127,9 @@ span.googlegroup, span.twitter {
   margin-right:30px;
   height:33px;
 }
+span.twitter {
+  vertical-align: middle;
+}
 span.googlegroup form{
   margin-bottom:0;
 }

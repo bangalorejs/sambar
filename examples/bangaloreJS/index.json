@@ -9,8 +9,8 @@
         "id"      : "third"
       , "tickets" : "http://bangalorejs_third.eventbrite.com"
       , "when"    : {
-          "start" : "2012/11/17 10:30:00"
-        , "end"   : "2012/11/17 13:00:00"
+          "start" : "2012/11/24 10:30:00"
+        , "end"   : "2012/11/24 13:00:00"
       } 
       , "where"   : {
           "address_1" : "Swissnex India"
@@ -46,7 +46,57 @@
         }
         , "www"       : "http://www.hasgeek.com"
       }
-      , "videos"      : []
+      , "videos"      : ["8-R_rBFlgn8","ynS8548pygY","s0sJ61UvgBY","P5HfyWwiejE"]
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Short break and networking."}
+        , { "when": "11:45", "what" : "Second talk by ", "speaker_idx":"second"}
+        , { "when": "12:15", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
+        , { "when": "13:00", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first" : {
+            "when"      : "11:45"
+          , "name"      : "Tamillharasan Chandran"
+          , "talk"      : {
+              "title"   : "When MVC is Overkill, Sammy.js to the Rescue"
+            , "abstract" : "Sometimes MVC or MVVM can be too much, but still, code structuring is desirable. This is where Sammy.js comes in handy. During the course of this talk, we will explore how it provides your app with a simple and compact structure of Routes, Events and Module patterns." 
+          }
+          , "bio"       : "Tamil is Product Developer at Multunus"
+          , "pic"       : "./images/speakers/tamil_146x146.png"
+          , "facebook"  : ""
+          , "github"    : "tamillarasan"
+          , "twitter"   : "tamillarasan"
+        }  
+        , "second" : {
+            "when"      : "12:30"
+          , "name"      : "Aravind Ravi Sulekha"
+          , "talk"      : {
+              "title"   : "JS Patterns Found in Nature"
+            , "abstract" : "Aravind will discuss some of the common patterns found in Node.js and client-side JS code, along with related new language features proposed in EcmaScript6."
+
+          }
+          , "bio"       : "Aravind is Co-founder at Askabt"
+          , "pic"       : "./images/speakers/aravind_146x146.png"
+          , "github"    : "aravindet"
+          , "twitter"   : "_aravind"
+        }  
+        , "third": {
+            "when"      : "11:00"
+          , "name"      : "Anirudh Shivanand"
+          , "talk"      : {
+              "title"   : "Getting Started with Ember.js"
+            , "abstract" : "A beginner's view into Ember.js which is a popular framework for building robust applications. Anirudh will show-case different capabilities of the framework like auto-updating templates, data-bindings and computed properties."
+          }
+          , "bio"       : "Anirudh is Web/iOS Develeoper at Tarams"
+          , "pic"       : "./images/speakers/anirudh_146x146.png"
+          , "facebook"  : ""
+          , "github"    : "theobile"
+          , "twitter"   : "theobile"
+        }  
+      }
     },
     {
         "id"      : "second"
