@@ -6,6 +6,83 @@
   , "domain"      : "www.bangalorejs.org"
   , "events"      : [
     {
+        "id"      : "fourth"
+      , "tickets" : "http://bangalorejs_fourth.eventbrite.com"
+      , "when"    : {
+          "start" : "2013/01/26 10:30:00"
+        , "end"   : "2013/01/26 13:00:00"
+      } 
+      , "where"   : {
+          "address" : ["Microsoft", "Block E, Signature Building", "Embassy Golf Links Business Park", "Off. Intermediate Ring Road, Domlur"]
+        , "city"    : "Bangalore 560 071"
+        , "map"     : "./images/venue/msft_location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Microsoft"
+        , "pic"         : {
+            "path"    : "./images/sponsors/msft.png"
+          , "width"   : "300px"
+          , "height"  : "210px" 
+        }
+        , "description" : "..."
+        , "www"         : "http://www.microsoft.com"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "support": {
+          "name"        : "HasGeek"
+        , "pic"         : {
+            "path"    : "./images/sponsors/hasgeek.logo.png"
+          , "width"  : "96px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.hasgeek.com"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:45", "what" : "Short break and networking."}
+        , { "when": "12:15", "what" : "Closing talk by ", "speaker_idx":"second"}
+        , { "when": "13:00", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first" : {
+            "when"      : "11:00"
+          , "name"      : "Santosh Rajan"
+          , "talk"      : {
+              "title"   : "Lispyscript"
+            , "abstract" : "Details coming soon" 
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/santosh_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }  
+        , "second": {
+            "when"      : "13:00"
+          , "name"      : "Marak Squires"
+          , "talk"      : {
+              "title"   : "Big"
+            , "abstract" : "Details coming soon"
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/marak_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }  
+      }
+    },
+    {
         "id"      : "third"
       , "tickets" : "http://bangalorejs_third.eventbrite.com"
       , "when"    : {
@@ -13,8 +90,7 @@
         , "end"   : "2012/11/24 13:00:00"
       } 
       , "where"   : {
-          "address_1" : "Swissnex India"
-        , "address_2" : "26 Rest House Crescent Road"
+          "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
         , "map"     : "./images/venue/swissnex_location.png"
       }
@@ -106,8 +182,7 @@
         , "end"   : "2012/09/15 13:00:00"
       } 
       , "where"   : {
-          "address_1" : "Swissnex India"
-        , "address_2" : "26 Rest House Crescent Road"
+          "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
         , "map"     : "./images/venue/swissnex_location.png"
       }
@@ -199,8 +274,7 @@
         , "end"   : "2012/08/18 13:00:00"
       } 
       , "where"   : {
-          "address_1" : "Swissnex India"
-        , "address_2" : "26 Rest House Crescent Road"
+          "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
         , "map"     : "./images/venue/swissnex_location.png"
       }

@@ -87,8 +87,8 @@ html
                 - var current = new Date();
                 h4.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
                 h3.white Where
-                h4.orange=event.where.address_1
-                h4.orange=event.where.address_2
+                - each a in event.where.address
+                  h4.orange=a
                 h4.orange=event.where.city
                 if current < start
                   h3.white Grab your ticket today: 
