@@ -45,7 +45,7 @@
         }
         , "www"       : "http://www.hasgeek.com"
       }
-      , "videos"      : []
+      , "videos"      : ["kD83Buw_-4M","gRs7Lg_y-lM","tNvI7KdXwos","e4Xes2ts7xU","L7QTNYMQiz0","-Y5uJMhrWI8"]
       , "agenda"      : [
           { "when": "10:30", "what" : "Gathering and light refreshments."}
         , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
@@ -56,13 +56,13 @@
       , "speakers"    : {
         "first" : {
             "when"      : "11:00"
-          , "name"      : "Santosh Rajan"
+          , "name"      : "Lightning Talks"
           , "talk"      : {
-              "title"   : "Lispyscript"
-            , "abstract" : "Details coming soon" 
+              "title"   : "Speakers"
+            , "abstract" : "Aram (<a href='http://twitter.com/phoenixwizard'>@phoenixwizard</a>), Raj (<a href='http://twitter.com/avranju'>@avranju</a>), Guruprasad, Dhaval (<a href='http://twitter.com/dhavaltrivedi'>@dhavaltrivedi</a>), Rajat"
           }
           , "bio"       : ""
-          , "pic"       : "./images/speakers/santosh_146x146.png"
+          , "pic"       : "./images/speakers/lightning_146x146.png"
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
@@ -71,14 +71,14 @@
             "when"      : "13:00"
           , "name"      : "Marak Squires"
           , "talk"      : {
-              "title"   : "Big"
-            , "abstract" : "Details coming soon"
+              "title"   : "Big Announcement"
+            , "abstract" : "The official launch of Big at BangaloreJS. More info on Github: <a href='https://github.com/bigcompany/big'>Big</a>, <a href='https://github.com/bigcompany/resources'>Resources</a>, <a href='https://github.com/bigcompany/resource'>Resource</a>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/marak_146x146.png"
           , "facebook"  : ""
-          , "github"    : ""
-          , "twitter"   : ""
+          , "github"    : "marak"
+          , "twitter"   : "marak"
         }  
       }
     },
