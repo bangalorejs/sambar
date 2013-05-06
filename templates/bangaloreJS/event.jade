@@ -176,7 +176,8 @@ html
             span.frame
               span
                 h2 Grab your ticket today: 
-                  a(href=event.tickets,target='_blank') #{event.tickets}
+                  span
+                    a(href=event.tickets,target='_blank') #{event.tickets}
       #pic_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
         .modal-body
           .carousel-control.left(onclick='return showLR("left");')

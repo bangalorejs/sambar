@@ -6,7 +6,6 @@
   , "domain"      : "www.bangalorejs.org"
   , "events"      : [
     {
-<<<<<<< HEAD
         "id"      : "sixth"
       , "tickets" : "http://bangalorejs-sixth.eventbrite.com"
       , "when"    : {
@@ -27,28 +26,6 @@
         }
         , "description" : "..."
         , "www"         : "http://www.microsoft.com/en-in/accelerator/"
-=======
-        "id"      : "five"
-      , "tickets" : "http://bangalorejs_five.eventbrite.com"
-      , "when"    : {
-          "start" : "2013/03/16 10:30:00"
-        , "end"   : "2013/03/16 13:00:00"
-      } 
-      , "where"   : {
-          "address" : ["Swissnex India", "26 Rest House Crescent Road"]
-        , "city"    : "Bangalore 560 001"
-        , "map"     : "./images/venue/swissnex_location.png"
-      }
-      , "sponsor" : {
-          "name"        : "Swissnex India"
-        , "pic"         : {
-            "path"    : "./images/sponsors/swissnex.png"
-          , "width"   : "201px"
-          , "height"  : "72px" 
-        }
-        , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
-        , "www"         : "http://www.swissnexindia.org"
->>>>>>> bangalorejs 5th meetup
       }
       , "organization": {
           "name"        : "Minsh"
@@ -68,7 +45,6 @@
         }
         , "www"       : "http://www.hasgeek.com"
       }
-<<<<<<< HEAD
       , "videos"      : []
       , "agenda"      : [
           { "when": "10:30", "what" : "Gathering and light refreshments."}
@@ -77,14 +53,6 @@
         , { "when": "11:45", "what" : "Main talk by ", "speaker_idx":"second"}
         , { "when": "12:15", "what" : "Short break and networking."}
         , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
-=======
-      , "videos"      : ["LzHbMO0fb7g","dnOT1HQmP_U","-BP70z_llYY","YuJgJPTZNPk","jOrzO0V0o7s","xw86fXq2cKM","Rx133kZKW34","qKgTUcAJVg8"]
-      , "agenda"      : [
-          { "when": "10:30", "what" : "Gathering and light refreshments."}
-        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
-        , { "when": "11:45", "what" : "Short break and networking."}
-        , { "when": "12:15", "what" : "Closing talk by ", "speaker_idx":"second"}
->>>>>>> bangalorejs 5th meetup
         , { "when": "13:00", "what" : "End."}
       ]
       , "speakers"    : {
@@ -93,11 +61,7 @@
           , "name"      : "Lightning Talks"
           , "talk"      : {
               "title"   : "Speakers"
-<<<<<<< HEAD
             , "abstract" : "Ciju (<a href='http://twitter.com/ciju'>@ciju</a>), any other motivated flash talker? <a href=\"mailto:jon@minsh.net\">contact us</a>"
-=======
-            , "abstract" : "Gaurav Tiwari (<a href='http://twitter.com/gauravtiwari505'>@gauravtiwari505</a>) - Papyrus Editor,<br/> Santhosh Rajan (<a href='http://twitter.com/santoshrajan'>@santoshrajan</a>) - Lispyscript,<br/> Maulik Suchak (<a href='http://twitter.com/ermauliks'>@ermauliks</a>) - Frontend.in,<br/> Praveen Kumar (<a href='http://twitter.com/apnerve'>@apnerve</a>) - MIDI.js,<br/> Ankur Agarwal (<a href='http://twitter.com/debuggify'>@debuggify</a>) - Debuggify,<br/> Rakesh Pai (<a href='http://twitter.com/rakesh314'>@rakesh314</a>) - Cumin"
->>>>>>> bangalorejs 5th meetup
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
@@ -106,7 +70,6 @@
           , "twitter"   : ""
         }  
         , "second": {
-<<<<<<< HEAD
             "when"      : "11:45"
           , "name"      : "Harish Sivaramkrishnan"
           , "talk"      : {
@@ -131,7 +94,72 @@
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
-=======
+        }  
+      }
+    },
+    {
+        "id"      : "fifth"
+      , "tickets" : "http://bangalorejs_five.eventbrite.com"
+      , "when"    : {
+          "start" : "2013/03/16 10:30:00"
+        , "end"   : "2013/03/16 13:00:00"
+      } 
+      , "where"   : {
+          "address" : ["Swissnex India", "26 Rest House Crescent Road"]
+        , "city"    : "Bangalore 560 001"
+        , "map"     : "./images/venue/swissnex_location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Swissnex India"
+        , "pic"         : {
+            "path"    : "./images/sponsors/swissnex.png"
+          , "width"   : "201px"
+          , "height"  : "72px" 
+        }
+        , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
+        , "www"         : "http://www.swissnexindia.org"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "support": {
+          "name"        : "HasGeek"
+        , "pic"         : {
+            "path"    : "./images/sponsors/hasgeek.logo.png"
+          , "width"  : "96px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.hasgeek.com"
+      }
+      , "videos"      : ["LzHbMO0fb7g","dnOT1HQmP_U","-BP70z_llYY","YuJgJPTZNPk","jOrzO0V0o7s","xw86fXq2cKM","Rx133kZKW34","qKgTUcAJVg8"]
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:45", "what" : "Short break and networking."}
+        , { "when": "12:15", "what" : "Closing talk by ", "speaker_idx":"second"}
+        , { "when": "13:00", "what" : "End."}
+      ]
+      , "speakers"    : {
+            "first" : {
+            "when"      : "11:00"
+          , "name"      : "Lightning Talks"
+          , "talk"      : {
+              "title"   : "Speakers"
+            , "abstract" : "Gaurav Tiwari (<a href='http://twitter.com/gauravtiwari505'>@gauravtiwari505</a>) - Papyrus Editor,<br/> Santhosh Rajan (<a href='http://twitter.com/santoshrajan'>@santoshrajan</a>) - Lispyscript,<br/> Maulik Suchak (<a href='http://twitter.com/ermauliks'>@ermauliks</a>) - Frontend.in,<br/> Praveen Kumar (<a href='http://twitter.com/apnerve'>@apnerve</a>) - MIDI.js,<br/> Ankur Agarwal (<a href='http://twitter.com/debuggify'>@debuggify</a>) - Debuggify,<br/> Rakesh Pai (<a href='http://twitter.com/rakesh314'>@rakesh314</a>) - Cumin"
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/lightning_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }  
+        , "second": {
             "when"      : "13:00"
           , "name"      : "Prateek Dayal"
           , "talk"      : {
@@ -143,7 +171,6 @@
           , "facebook"  : ""
           , "github"    : "prateekdayal"
           , "twitter"   : "prateekdayal"
->>>>>>> bangalorejs 5th meetup
         }  
       }
     },

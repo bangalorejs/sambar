@@ -1,5 +1,4 @@
 .navbar {
-  width: 700px;
   display: inline-block;
 }
 
@@ -16,6 +15,10 @@
 
 p {
   font-size: 18px;
+}
+
+h2 > span {
+  display: block;
 }
 
 .row {
