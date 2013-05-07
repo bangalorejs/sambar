@@ -20,9 +20,9 @@
       , "sponsor" : {
           "name"        : "Microsoft Accelerator"
         , "pic"         : {
-            "path"    : "./images/sponsors/msft.png"
-          , "width"   : "300px"
-          , "height"  : "210px" 
+            "path"    : "./images/sponsors/accelerator.png"
+          , "width"   : "306px"
+          , "height"  : "184px" 
         }
         , "description" : "..."
         , "www"         : "http://www.microsoft.com/en-in/accelerator/"
@@ -61,7 +61,7 @@
           , "name"      : "Lightning Talks"
           , "talk"      : {
               "title"   : "Speakers"
-            , "abstract" : "Ciju (<a href='http://twitter.com/ciju'>@ciju</a>), any other motivated flash talker? <a href=\"mailto:jon@minsh.net\">contact us</a>"
+            , "abstract" : "Ciju (<a href='http://twitter.com/ciju'>@ciju</a>), Jon (<a href='http://twitter.com/jonmaim'>@jonmaim</a>), any other motivated flash talker? <a href=\"mailto:jon@minsh.net\">contact us</a>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
@@ -84,7 +84,7 @@
         }  
         , "third": {
             "when"      : "12:30"
-          , "name"      : "Lightning Talks"
+          , "name"      : "Some More Lightning Talks"
           , "talk"      : {
               "title"   : "Speakers"
             , "abstract" : "Any motivated flash talker? <a href=\"mailto:jon@minsh.net\">contact us</a>"
