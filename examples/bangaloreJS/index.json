@@ -45,7 +45,7 @@
         }
         , "www"       : "http://www.hasgeek.com"
       }
-      , "videos"      : []
+      , "videos"      : ["LLymsrWNhCM", "J-rEr17lDQM", "d6YELx4DHPI", "T8T2WrJC8wA", "CfkxMs6cza8", "hxSB3mEFo3I", "cYmP9Es3r6s", "86pswYiUjjg", "PYaD1ZtfwFg"]
       , "agenda"      : [
           { "when": "10:30", "what" : "Gathering and light refreshments."}
         , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
