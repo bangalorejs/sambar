@@ -31,14 +31,37 @@ html
         .navbar
           .navbar-inner
             ul.nav
-              - each v in cfg.events
-                - var vdate = new Date(v.when.start);
-                  if (v.id === event.id)
-                    li.active
-                      a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
-                  else
-                    li
-                      a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)}
+              - if (cfg.events.length > 6) {
+                - for (var i = 0; i < 5; ++i ) {
+                  - var v = cfg.events[i];
+                  - var vdate = new Date(v.when.start);
+                    if (v.id === event.id)
+                      li.active
+                        a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)} #{getYear(vdate)}
+                    else
+                      li
+                        a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)} #{getYear(vdate)}
+                - }
+                li#archive.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown') Archive
+                    b.caret
+                  ul.dropdown-menu
+                    - for (var i = 5; i < cfg.events.length; ++i) {
+                      - var v = cfg.events[i];
+                      - var vdate = new Date(v.when.start);
+                      li
+                        a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)} #{getYear(vdate)}
+                    - }
+              - } else {
+                - each v in cfg.events
+                  - var vdate = new Date(v.when.start);
+                    if (v.id === event.id)
+                      li.active
+                        a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)} #{getYear(vdate)}
+                    else
+                      li
+                        a(href='#{v.id}.html') #{monthNames[vdate.getMonth()]} #{getDate(vdate)} #{getYear(vdate)}
+              - }
       .row
         .header.jumbotron
           .left
