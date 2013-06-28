@@ -58,16 +58,16 @@
       , "speakers"    : {
         "first" : {
             "when"      : "11:00"
-          , "name"      : "S Anand"
+          , "name"      : "Sunil Pai"
           , "talk"      : {
-              "title"   : "To be detailed"
-            , "abstract" : "To be detailed."
+              "title"   : "Npm / Browserify / Sync Lib"
+            , "abstract" : "To be detailed" 
           }
-          , "bio"       : "Anand is Chief Data Scientist at Gramener"
-          , "pic"       : "./images/speakers/sanand_146x146.jpg"
+          , "bio"       : "Sunil is just Sunil"
+          , "pic"       : "./images/speakers/sunil_146x146.png"
           , "facebook"  : ""
-          , "github"    : "sanand0"
-          , "twitter"   : "sanand0"
+          , "github"    : "threepointone"
+          , "twitter"   : "threepointone"
         }  
         , "second": {
             "when"      : "11:45"
@@ -84,16 +84,16 @@
         }  
         , "third": {
             "when"      : "12:30"
-          , "name"      : "Sunil Pai"
+          , "name"      : "S Anand"
           , "talk"      : {
-              "title"   : "Npm / Browserify / Sync Lib"
-            , "abstract" : "To be detailed" 
+              "title"   : "To be detailed"
+            , "abstract" : "To be detailed."
           }
-          , "bio"       : "Sunil is just Sunil"
-          , "pic"       : "./images/speakers/sunil_146x146.png"
+          , "bio"       : "Anand is Chief Data Scientist at Gramener"
+          , "pic"       : "./images/speakers/sanand_146x146.jpg"
           , "facebook"  : ""
-          , "github"    : "threepointone"
-          , "twitter"   : "threepointone"
+          , "github"    : "sanand0"
+          , "twitter"   : "sanand0"
         }  
       }
     },
