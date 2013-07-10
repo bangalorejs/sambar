@@ -50,7 +50,7 @@
           { "when": "10:30", "what" : "Gathering and light refreshments."}
         , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
         , { "when": "11:30", "what" : "Short break and networking."}
-        , { "when": "11:45", "what" : "Main talk by ", "speaker_idx":"second"}
+        , { "when": "11:45", "what" : "Second talk by ", "speaker_idx":"second"}
         , { "when": "12:15", "what" : "Short break and networking."}
         , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
         , { "when": "13:00", "what" : "End."}
@@ -60,10 +60,10 @@
             "when"      : "11:00"
           , "name"      : "Sunil Pai"
           , "talk"      : {
-              "title"   : "Npm / Browserify / Sync Lib"
-            , "abstract" : "To be detailed" 
+              "title"   : "Lazy Code"
+            , "abstract" : "A demonstrattion of sudom, a small experimental library for sharing view rendering logic between node and the browser. It's all code, no filler. I'd also like to demo the npm/browserify workflow, with a general view on what the future of js build systems might look like."
           }
-          , "bio"       : "Sunil is just Sunil"
+          , "bio"       : ""
           , "pic"       : "./images/speakers/sunil_146x146.png"
           , "facebook"  : ""
           , "github"    : "threepointone"
