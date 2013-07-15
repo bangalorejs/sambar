@@ -58,10 +58,10 @@
       , "speakers"    : {
         "first" : {
             "when"      : "11:00"
-          , "name"      : "Lightning Talks"
+          , "name"      : "Flash Talks"
           , "talk"      : {
               "title"   : "Speakers"
-            , "abstract" : "Ciju (<a href='http://twitter.com/ciju'>@ciju</a>), Jon (<a href='http://twitter.com/jonmaim'>@jonmaim</a>), any other motivated flash talker? <a href=\"mailto:jon@minsh.net\">contact us</a>"
+            , "abstract" : "<a href='http://github.com/ciju/devmirror'>DevMirror</a> by <a href='http://twitter.com/ciju'>Ciju</a><br/> <a href='http://github.com/minsh/s3front'>S3Front</a> by <a href='http://twitter.com/jonmaim'>Jon</a><br/> AngularJS Animation by Satish<br/> NodeJS MySQL Monitoring by Arjun"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
@@ -73,8 +73,8 @@
             "when"      : "11:45"
           , "name"      : "Harish Sivaramkrishnan"
           , "talk"      : {
-              "title"   : "To Be Detailed"
-            , "abstract" : "To be detailed."
+              "title"   : "Building an HTML5 Game with CreateJS"
+            , "abstract" : "Live coding session."
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/harish_146x146.jpg"
@@ -84,10 +84,11 @@
         }  
         , "third": {
             "when"      : "12:30"
-          , "name"      : "Some More Lightning Talks"
+          , "name"      : "Some More Flash Talks"
           , "talk"      : {
               "title"   : "Speakers"
             , "abstract" : "Any motivated flash talker? <a href=\"mailto:jon@minsh.net\">contact us</a>"
+            , "abstract" : "RHOK by Praveen<br/> <a href='https://singlepagebook.supportbee.com/'>Single Page App Book</a> by <a href='http://twitter.com/prateekdayal'>Prateek</a><br/> Tracking Cross Origin Scripts by <a href='http://twitter.com/debuggify'>Ankur</a><br/> Grunt App Deployment by Bilal<br/>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
@@ -148,7 +149,7 @@
       , "speakers"    : {
             "first" : {
             "when"      : "11:00"
-          , "name"      : "Lightning Talks"
+          , "name"      : "Flash Talks"
           , "talk"      : {
               "title"   : "Speakers"
             , "abstract" : "Gaurav Tiwari (<a href='http://twitter.com/gauravtiwari505'>@gauravtiwari505</a>) - Papyrus Editor,<br/> Santhosh Rajan (<a href='http://twitter.com/santoshrajan'>@santoshrajan</a>) - Lispyscript,<br/> Maulik Suchak (<a href='http://twitter.com/ermauliks'>@ermauliks</a>) - Frontend.in,<br/> Praveen Kumar (<a href='http://twitter.com/apnerve'>@apnerve</a>) - MIDI.js,<br/> Ankur Agarwal (<a href='http://twitter.com/debuggify'>@debuggify</a>) - Debuggify,<br/> Rakesh Pai (<a href='http://twitter.com/rakesh314'>@rakesh314</a>) - Cumin"
@@ -225,7 +226,7 @@
       , "speakers"    : {
         "first" : {
             "when"      : "11:00"
-          , "name"      : "Lightning Talks"
+          , "name"      : "Flash Talks"
           , "talk"      : {
               "title"   : "Speakers"
             , "abstract" : "Aram (<a href='http://twitter.com/phoenixwizard'>@phoenixwizard</a>), Raj (<a href='http://twitter.com/avranju'>@avranju</a>), Guruprasad, Dhaval (<a href='http://twitter.com/dhavaltrivedi'>@dhavaltrivedi</a>), Rajat"
