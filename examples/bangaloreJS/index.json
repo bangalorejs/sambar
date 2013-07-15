@@ -86,8 +86,8 @@
             "when"      : "12:30"
           , "name"      : "S Anand"
           , "talk"      : {
-              "title"   : "To be detailed"
-            , "abstract" : "To be detailed."
+              "title"   : "Scraping the Government with Javascript"
+            , "abstract" : "We will talk about using PhantomJS for scraping, and what we did with government toilet construction data."
           }
           , "bio"       : "Anand is Chief Data Scientist at Gramener"
           , "pic"       : "./images/speakers/sanand_146x146.jpg"
