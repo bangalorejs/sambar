@@ -104,6 +104,15 @@ function createSiteAt(path) {
          else if (d === 3 || d === 23)         return d+"rd";
          else                                  return d+"th";
        }
+       , getYear:function(dd){
+         var year = dd.getFullYear();
+         var nowYear = new Date().getFullYear();
+         if (nowYear === year){
+           return '';
+         } else {
+           return year;
+         }
+       }
        , getMinutes:function(dd){
          var d = dd.getMinutes();
          return (d<=9) ? '0'+d : d;

@@ -1,5 +1,14 @@
 .navbar {
   display: inline-block;
+  width: 700px;
+}
+.navbar .nav {
+  width: 660px;
+  margin: 0 0 0 0!important;
+}
+
+#archive.dropdown {
+  float: right;
 }
 
 .jumbotron {
