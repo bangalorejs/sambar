@@ -71,10 +71,10 @@
         }  
         , "second": {
             "when"      : "11:45"
-          , "name"      : "Lightning Talks"
+          , "name"      : "Flash Talks"
           , "talk"      : {
               "title"   : "Speakers"
-            , "abstract" : "Jon (<a href='http://twitter.com/jonmaim'>@jonmaim</a>), any other motivated flash talker? <a href=\"mailto:jon@minsh.net\">contact us</a>"
+            , "abstract" : "<a href=\"mailto:jon@minsh.net\">Contact us</a>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
