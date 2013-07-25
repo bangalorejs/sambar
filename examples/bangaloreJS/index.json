@@ -74,7 +74,7 @@
           , "name"      : "Flash Talks"
           , "talk"      : {
               "title"   : "Speakers"
-            , "abstract" : "<a href=\"mailto:jon@minsh.net\">Contact us</a>"
+            , "abstract" : "Game Closure by <a href='http://twitter.com/rampr_'>Ramprasad</a><br/> WebRTC by <a href='http://twitter.com/debuggify'>Ankur</a><br/> Emo2 JS SDK by <a href='http://twitter.com/aab1d'>Abid</a><br/> Yeoman by <a href='http://twitter.com/gnumanth'>Hemanth</a></br> CVSintellect by <a href='http://twitter.com/ermauliks'>Maulik</a></br>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
