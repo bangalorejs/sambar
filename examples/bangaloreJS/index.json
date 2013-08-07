@@ -1,17 +1,94 @@
 {
-    "name"        : "BangaloreJS" 
+    "name"        : "BangaloreJS"
   , "twitter"     : "BangaloreJS"
   , "googlegroup" : "bangalorejs"
-  , "description" : "Javascript User Group Meetup"
-  , "domain"      : "www.bangalorejs.org"
+  , "description" : "Bangalore Javascript Community Meetup"
+  , "domain"      : "bangalorejs.org"
   , "events"      : [
+    {
+        "id"      : "eighth"
+      , "tickets" : "http://bangalorejs8.eventbrite.com"
+      , "when"    : {
+          "start" : "2013/08/31 10:30:00"
+        , "end"   : "2013/08/31 13:30:00"
+      }
+      , "where"   : {
+          "address" : ["Apigee", "No. 17/2, 2nd B Cross, 7th Main, Off 80 Feet Road"]
+        , "city"    : "Bangalore 560034"
+        , "map"     : "./images/venue/apigee_location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Apigee"
+        , "pic"         : {
+            "path"    : "./images/sponsors/apigee.png"
+          , "width"   : "200px"
+          , "height"  : "74px"
+        }
+        , "description" : ""
+        , "www"         : "http://apigee.com/about/contact"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "support": {
+          "name"        : "HasGeek"
+        , "pic"         : {
+            "path"    : "./images/sponsors/hasgeek.logo.png"
+          , "width"  : "96px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.hasgeek.com"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Short break and networking."}
+        , { "when": "11:45", "what" : "Second talk by ", "speaker_idx":"second"}
+        , { "when": "13:00", "what" : "Pizza and Birthday Cake."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "Flash Talks"
+          , "talk"      : {
+              "title"   : "Speakers"
+            , "abstract" : "<a href='mailto:jon@minsh.net'>Contact us</a> for a slot."
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/lightning_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "second": {
+            "when"      : "11:45"
+          , "name"      : "Future of Web Apps on Mobile Phones"
+          , "talk"      : {
+              "title"   : "Special 1 year Anniversary Panel"
+            , "abstract" : "To celebrate BJS's first anniversary in style, we have gathered experts from all major industries to discuss this tricky subject with us. Meet representatives from MS phones, iOS, Android, Firefox OS and of course JS/HTML5/CSS3. Ask them all your questions, and get their input on what does the future hold for mobile app developers across all these platforms.<p>Moderation:<br/>Rahul Gonsalves<p/><p>Panelists:<br/>Amrit Sanjeev (Android)<br/>Aram Bhusal (Android + JS)<br/>Rajasekharan Vengalil (Windows Phone)<br/>Gokul Sengottuvelu (iOS)<br/>Jai Pradeesh (Firefox OS)</p>"
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/panel_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+      }
+    },
     {
         "id"      : "seventh"
       , "tickets" : "http://bangalorejs-seventh.eventbrite.com"
       , "when"    : {
           "start" : "2013/07/20 10:30:00"
         , "end"   : "2013/07/20 13:00:00"
-      } 
+      }
       , "where"   : {
           "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
@@ -22,7 +99,7 @@
         , "pic"         : {
             "path"    : "./images/sponsors/swissnex.png"
           , "width"   : "201px"
-          , "height"  : "72px" 
+          , "height"  : "72px"
         }
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
@@ -68,7 +145,7 @@
           , "facebook"  : ""
           , "github"    : "threepointone"
           , "twitter"   : "threepointone"
-        }  
+        }
         , "second": {
             "when"      : "11:45"
           , "name"      : "Flash Talks"
@@ -81,7 +158,7 @@
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
-        }  
+        }
         , "third": {
             "when"      : "12:30"
           , "name"      : "S Anand"
@@ -94,7 +171,7 @@
           , "facebook"  : ""
           , "github"    : "sanand0"
           , "twitter"   : "sanand0"
-        }  
+        }
       }
     },
     {
@@ -103,7 +180,7 @@
       , "when"    : {
           "start" : "2013/05/11 10:30:00"
         , "end"   : "2013/05/11 13:00:00"
-      } 
+      }
       , "where"   : {
           "address" : ["Microsoft Accelerator", "#9, Lavelle Road"]
         , "city"    : "Bangalore 560 001"
@@ -114,7 +191,7 @@
         , "pic"         : {
             "path"    : "./images/sponsors/accelerator.png"
           , "width"   : "306px"
-          , "height"  : "184px" 
+          , "height"  : "184px"
         }
         , "description" : "..."
         , "www"         : "http://www.microsoft.com/en-in/accelerator/"
@@ -160,7 +237,7 @@
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
-        }  
+        }
         , "second": {
             "when"      : "11:45"
           , "name"      : "Harish Sivaramkrishnan"
@@ -173,7 +250,7 @@
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : "hsivaram"
-        }  
+        }
         , "third": {
             "when"      : "12:30"
           , "name"      : "Some More Flash Talks"
@@ -187,7 +264,7 @@
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
-        }  
+        }
       }
     },
     {
@@ -196,7 +273,7 @@
       , "when"    : {
           "start" : "2013/03/16 10:30:00"
         , "end"   : "2013/03/16 13:00:00"
-      } 
+      }
       , "where"   : {
           "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
@@ -207,7 +284,7 @@
         , "pic"         : {
             "path"    : "./images/sponsors/swissnex.png"
           , "width"   : "201px"
-          , "height"  : "72px" 
+          , "height"  : "72px"
         }
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
@@ -251,7 +328,7 @@
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
-        }  
+        }
         , "second": {
             "when"      : "13:00"
           , "name"      : "Prateek Dayal"
@@ -264,7 +341,7 @@
           , "facebook"  : ""
           , "github"    : "prateekdayal"
           , "twitter"   : "prateekdayal"
-        }  
+        }
       }
     },
     {
@@ -273,7 +350,7 @@
       , "when"    : {
           "start" : "2013/01/26 10:30:00"
         , "end"   : "2013/01/26 13:00:00"
-      } 
+      }
       , "where"   : {
           "address" : ["Microsoft", "Block E, Signature Building", "Embassy Golf Links Business Park", "Off. Intermediate Ring Road, Domlur"]
         , "city"    : "Bangalore 560 071"
@@ -284,7 +361,7 @@
         , "pic"         : {
             "path"    : "./images/sponsors/msft.png"
           , "width"   : "300px"
-          , "height"  : "210px" 
+          , "height"  : "210px"
         }
         , "description" : "..."
         , "www"         : "http://www.microsoft.com"
@@ -328,7 +405,7 @@
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
-        }  
+        }
         , "second": {
             "when"      : "13:00"
           , "name"      : "Marak Squires"
@@ -341,7 +418,7 @@
           , "facebook"  : ""
           , "github"    : "marak"
           , "twitter"   : "marak"
-        }  
+        }
       }
     },
     {
@@ -350,7 +427,7 @@
       , "when"    : {
           "start" : "2012/11/24 10:30:00"
         , "end"   : "2012/11/24 13:00:00"
-      } 
+      }
       , "where"   : {
           "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
@@ -361,7 +438,7 @@
         , "pic"         : {
             "path"    : "./images/sponsors/swissnex.png"
           , "width"   : "201px"
-          , "height"  : "72px" 
+          , "height"  : "72px"
         }
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
@@ -400,14 +477,14 @@
           , "name"      : "Tamillharasan Chandran"
           , "talk"      : {
               "title"   : "When MVC is Overkill, Sammy.js to the Rescue"
-            , "abstract" : "Sometimes MVC or MVVM can be too much, but still, code structuring is desirable. This is where Sammy.js comes in handy. During the course of this talk, we will explore how it provides your app with a simple and compact structure of Routes, Events and Module patterns." 
+            , "abstract" : "Sometimes MVC or MVVM can be too much, but still, code structuring is desirable. This is where Sammy.js comes in handy. During the course of this talk, we will explore how it provides your app with a simple and compact structure of Routes, Events and Module patterns."
           }
           , "bio"       : "Tamil is Product Developer at Multunus"
           , "pic"       : "./images/speakers/tamil_146x146.png"
           , "facebook"  : ""
           , "github"    : "tamillarasan"
           , "twitter"   : "tamillarasan"
-        }  
+        }
         , "second" : {
             "when"      : "12:30"
           , "name"      : "Aravind Ravi Sulekha"
@@ -420,7 +497,7 @@
           , "pic"       : "./images/speakers/aravind_146x146.png"
           , "github"    : "aravindet"
           , "twitter"   : "_aravind"
-        }  
+        }
         , "third": {
             "when"      : "11:00"
           , "name"      : "Anirudh Shivanand"
@@ -433,7 +510,7 @@
           , "facebook"  : ""
           , "github"    : "theobile"
           , "twitter"   : "theobile"
-        }  
+        }
       }
     },
     {
@@ -442,7 +519,7 @@
       , "when"    : {
           "start" : "2012/09/15 10:30:00"
         , "end"   : "2012/09/15 13:00:00"
-      } 
+      }
       , "where"   : {
           "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
@@ -453,7 +530,7 @@
         , "pic"         : {
             "path"    : "./images/sponsors/swissnex.png"
           , "width"   : "201px"
-          , "height"  : "72px" 
+          , "height"  : "72px"
         }
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
@@ -499,20 +576,20 @@
           , "facebook"  : ""
           , "github"    : "raviteja2007"
           , "twitter"   : "raviteja2007"
-        }  
+        }
         , "second" : {
             "when"      : "11:45"
           , "name"      : "Sameer Segal"
           , "talk"      : {
               "title"   : "Data-driven Web Apps with D3.js and Backbone.js"
-            , "abstract" : "D3.js is amazing and very well documented but it takes some time to get the hang of it. Backbone.js is popular but its quite easy to get lost. Just when you get past these hurdles and you think you have a chart and a backbone app you're going to discover how hard it is to link them up. Welcome to backbone-d3! Sameer will cover everything from the basics to developing a working app. He will also show us the realtime dashboard he has made for his web app." 
+            , "abstract" : "D3.js is amazing and very well documented but it takes some time to get the hang of it. Backbone.js is popular but its quite easy to get lost. Just when you get past these hurdles and you think you have a chart and a backbone app you're going to discover how hard it is to link them up. Welcome to backbone-d3! Sameer will cover everything from the basics to developing a working app. He will also show us the realtime dashboard he has made for his web app."
           }
           , "bio"       : "Sameer is Founder & CEO at Artoo"
           , "pic"       : "./images/speakers/sameer_146x146.png"
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
-        }  
+        }
         , "third" : {
             "when"      : "12:30"
           , "name"      : "Rajasekharan Vengalil"
@@ -525,7 +602,7 @@
           , "pic"       : "./images/speakers/raj_146x146.png"
           , "github"    : "avranju"
           , "twitter"   : "avranju"
-        }  
+        }
       }
     },
     {
@@ -534,7 +611,7 @@
       , "when"    : {
           "start" : "2012/08/18 10:30:00"
         , "end"   : "2012/08/18 13:00:00"
-      } 
+      }
       , "where"   : {
           "address" : ["Swissnex India", "26 Rest House Crescent Road"]
         , "city"    : "Bangalore 560 001"
@@ -545,7 +622,7 @@
         , "pic"         : {
             "path"  : "./images/sponsors/swissnex.png"
           , "width"   : "201px"
-          , "height"  : "72px" 
+          , "height"  : "72px"
         }
         , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
         , "www"         : "http://www.swissnexindia.org"
@@ -591,20 +668,20 @@
           , "facebook"  : ""
           , "github"    : "rampr"
           , "twitter"   : "rampr_"
-        }  
+        }
         , "second" : {
             "when"      : "11:45"
           , "name"      : "Sunil Pai"
           , "talk"      : {
               "title"   : "Animating HTML Elements for Fun and Profit"
-            , "abstract" : "Sunil will share some tricks he has learnt in making user interfaces a little more... fun. He'll cover tweening, dynamic tweening, inertia and some common UX patterns. Demos and code shall be had by all." 
+            , "abstract" : "Sunil will share some tricks he has learnt in making user interfaces a little more... fun. He'll cover tweening, dynamic tweening, inertia and some common UX patterns. Demos and code shall be had by all."
           }
           , "bio"       : "Sunil is Tech Lead at Yahoo!"
           , "pic"       : "./images/speakers/sunil_146x146.png"
           , "facebook"  : ""
           , "github"    : "threepointone"
           , "twitter"   : "threepointone"
-        }  
+        }
         , "third" : {
             "when"      : "12:30"
           , "name"      : "Sreekanth Vadagiri"
@@ -617,7 +694,7 @@
           , "pic"       : "./images/speakers/sreekanth_146x146.jpeg"
           , "github"    : "sreeix"
           , "twitter"   : "sreeix"
-        }  
+        }
       }
     }
   ]
