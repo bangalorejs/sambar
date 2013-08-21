@@ -191,6 +191,25 @@ html
               span.frame
                 h3=v.talk.title
                 p!=v.talk.abstract
+              - if (v.participants)
+                span.frame
+                  - var numRows = v.participants.length / 3;
+                  - if (v.participants.length % 3) numRows += 1;
+                  - for (var i = 0; i < numRows; ++i ) {
+                    .row
+                      - for (var j = i*3; j < (i*3)+3; ++j){
+                        - var participant = v.participants[j];
+                        .participant
+                          img(src=event.id+'/'+participant.pic)
+                          span!=participant.name
+                          -if (participant.twitter)
+                            - var handle = '@'+ participant.twitter;
+                            span.small
+                              a(href='http://twitter.com/'+participant.twitter,target='_blank')
+                                =handle
+                          span.small!=participant.desc
+                      - }
+                  - }
           .row
               span.separator
       .row

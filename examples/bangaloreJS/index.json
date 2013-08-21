@@ -72,13 +72,49 @@
           , "name"      : "Future of Web Apps on Mobile Phones"
           , "talk"      : {
               "title"   : "Special 1 year Anniversary Panel"
-            , "abstract" : "To celebrate BJS's first anniversary in style, we have gathered experts from all major industries to discuss this tricky subject with us. Meet representatives from MS phones, iOS, Android, Firefox OS and of course JS/HTML5/CSS3. Ask them all your questions, and get their input on what does the future hold for mobile app developers across all these platforms.<p>Moderation:<br/>Rahul Gonsalves<p/><p>Panelists:<br/>Amrit Sanjeev (Android)<br/>Aram Bhusal (Android + JS)<br/>Rajasekharan Vengalil (Windows Phone)<br/>Gokul Sengottuvelu (iOS)<br/>Jai Pradeesh (Firefox OS)</p>"
+            , "abstract" : "To celebrate BJS's first anniversary in style, we have gathered experts from all major industries to discuss this tricky subject with us. Meet representatives from MS phones, iOS, Android, Firefox OS and of course JS/HTML5/CSS3. Ask them all your questions, and get their input on what does the future hold for mobile app developers across all these platforms.<p>Participants:</p>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/panel_146x146.png"
           , "facebook"  : ""
           , "github"    : ""
           , "twitter"   : ""
+          , "participants": [{
+              "name":"Amrit Sanjeev"
+            , "desc":"Android"
+            , "twitter":"amsanjeev"
+            , "pic":"./images/panel/amrit.png"
+            }
+          , {
+              "name":"Aram Bhusal"
+            , "desc":"JS, Android"
+            , "twitter":"phoenixwizard"
+            , "pic":"./images/panel/aram.jpeg"
+            }
+          , {
+              "name":"Rajasekharan Vengalil"
+            , "desc":"Windows Phone"
+            , "twitter":"avranju"
+            , "pic":"./images/panel/raj.png"
+            }
+          , {
+              "name":"Stalin Subramani"
+            , "desc":"iOS"
+            , "pic":"./images/panel/stalin.jpg"
+            }
+          , {
+              "name":"Jai Pradeesh"
+            , "desc":"Firefox OS"
+            , "twitter":"jaipradeesh"
+            , "pic":"./images/panel/jai.JPG"
+            }
+          , {
+              "name":"Rahul Gonsalves"
+            , "desc":"Moderator"
+            , "twitter":"gonsalves_r"
+            , "pic":"./images/panel/rahul.jpg"
+            }
+          ]
         }
       }
     },
