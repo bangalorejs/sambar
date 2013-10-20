@@ -6,6 +6,98 @@
   , "domain"      : "bangalorejs.org"
   , "events"      : [
     {
+        "id"      : "ninth"
+      , "tickets" : "http://bangalorejs9.eventbrite.com"
+      , "when"    : {
+          "start" : "2013/10/26 10:30:00"
+        , "end"   : "2013/10/26 13:30:00"
+      }
+      , "where"   : {
+          "address" : ["Swissnex India", "26 Rest House Crescent Road"]
+        , "city"    : "Bangalore 560 001"
+        , "map"     : "./images/venue/swissnex_location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Swissnex India"
+        , "pic"         : {
+            "path"    : "./images/sponsors/swissnex.png"
+          , "width"   : "201px"
+          , "height"  : "72px"
+        }
+        , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
+        , "www"         : "http://www.swissnexindia.org"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "support": {
+          "name"        : "HasGeek"
+        , "pic"         : {
+            "path"    : "./images/sponsors/hasgeek.logo.png"
+          , "width"  : "96px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.hasgeek.com"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Short break and networking."}
+        , { "when": "11:45", "what" : "Flash talks by you!"}
+        , { "when": "12:15", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
+        , { "when": "13:00", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "Dhaval Trivedi"
+          , "talk"      : {
+              "title"   : "Coming up"
+            , "abstract" : "Coming up"
+          }
+          , "bio"       : "Dhaval is Software Development Engineer at Amazon."
+          , "pic"       : "./images/speakers/dhaval_146x146.jpg"
+          , "facebook"  : ""
+          , "github"    : "dytrivedi"
+          , "twitter"   : "dhavaltrivedi"
+        }
+        , "second": {
+            "when"      : "11:45"
+          , "name"      : "Flash talks"
+          , "talk"      : {
+              "title"   : "Speakers"
+            , "abstract" : "You've got 5 to 10 min (max) to present something cool! <a href='mailto:jon@minsh.net'>Contact us</a> for a slot."
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/lightning_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "third": {
+            "when"      : "12:30"
+          , "name"      : "Krishna Srinivas"
+          , "talk"      : {
+              "title"   : "nutty.io"
+            , "abstract" : "Share your console terminal session using just a browser."
+          }
+          , "bio"       : "Coming up."
+          , "pic"       : "./images/speakers/krishna_146x146.jpg"
+          , "facebook"  : ""
+          , "github"    : "krishnasrinivas"
+          , "twitter"   : "nuttydotio"
+        }
+      }
+    },
+    {
         "id"      : "eighth"
       , "tickets" : "http://bangalorejs8.eventbrite.com"
       , "when"    : {
