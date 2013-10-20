@@ -215,7 +215,7 @@
       , "tickets" : "http://bangalorejs-seventh.eventbrite.com"
       , "when"    : {
           "start" : "2013/07/20 10:30:00"
-        , "end"   : "2013/07/20 13:00:00"
+        , "end"   : "2013/07/20 13:30:00"
       }
       , "where"   : {
           "address" : ["Swissnex India", "26 Rest House Crescent Road"]
