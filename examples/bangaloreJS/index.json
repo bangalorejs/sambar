@@ -59,7 +59,7 @@
           , "name"      : "Flash Talks"
           , "talk"      : {
               "title"   : "Speakers"
-            , "abstract" : "<a href='mailto:jon@minsh.net'>Contact us</a> for a slot."
+            , "abstract" : "Madan, Ajit, Hemanth, Ankur, Sunil, Vaidhy."
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
@@ -86,10 +86,10 @@
             , "pic":"./images/panel/amrit.png"
             }
           , {
-              "name":"Aram Bhusal"
-            , "desc":"JS, Android"
-            , "twitter":"phoenixwizard"
-            , "pic":"./images/panel/aram.jpeg"
+              "name":"Sunil Pai"
+            , "desc":"JS"
+            , "twitter":"threepointone"
+            , "pic":"./images/speakers/sunil_146x146.png"
             }
           , {
               "name":"Rajasekharan Vengalil"
