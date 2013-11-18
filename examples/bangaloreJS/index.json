@@ -6,6 +6,98 @@
   , "domain"      : "bangalorejs.org"
   , "events"      : [
     {
+        "id"      : "tenth"
+      , "tickets" : "http://bangalorejs10.eventbrite.com"
+      , "when"    : {
+          "start" : "2013/11/30 10:30:00"
+        , "end"   : "2013/11/30 13:30:00"
+      }
+      , "where"   : {
+          "address" : ["Google India Bangalore", "No. 3, RMZ Infinity - Old Madras Road"]
+        , "city"    : "Bangalore 560 016"
+        , "map"     : "./images/venue/google_location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Google"
+        , "pic"         : {
+            "path"    : "./images/sponsors/google.png"
+          , "width"   : "201px"
+          , "height"  : "72px"
+        }
+        , "description" : ""
+        , "www"         : "http://www.google.co.in"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "support": {
+          "name"        : "HasGeek"
+        , "pic"         : {
+            "path"    : "./images/sponsors/hasgeek.logo.png"
+          , "width"  : "96px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.hasgeek.com"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Short break and networking."}
+        , { "when": "11:45", "what" : "Flash talks by you!"}
+        , { "when": "12:15", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
+        , { "when": "13:00", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "TBA"
+          , "talk"      : {
+              "title"   : ""
+            , "abstract" : ""
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/johndoe_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "second": {
+            "when"      : "11:45"
+          , "name"      : "Flash talks"
+          , "talk"      : {
+              "title"   : "Speakers"
+              , "abstract" : ""
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/lightning_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "third": {
+            "when"      : "12:30"
+          , "name"      : "TBA"
+          , "talk"      : {
+              "title"   : ""
+            , "abstract" : ""
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/johndoe_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+      }
+    },
+    {
         "id"      : "ninth"
       , "tickets" : "http://bangalorejs9.eventbrite.com"
       , "when"    : {
@@ -58,23 +150,23 @@
       , "speakers"    : {
         "first": {
             "when"      : "11:00"
-          , "name"      : "Dhaval Trivedi"
+          , "name"      : "Krishna Srinivas"
           , "talk"      : {
-              "title"   : "Coming up"
-            , "abstract" : "Coming up"
+              "title"   : "nutty.io"
+            , "abstract" : "Share your console terminal session using just a browser."
           }
-          , "bio"       : "Dhaval is Software Development Engineer at Amazon."
-          , "pic"       : "./images/speakers/dhaval_146x146.jpg"
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/krishna_146x146.jpg"
           , "facebook"  : ""
-          , "github"    : "dytrivedi"
-          , "twitter"   : "dhavaltrivedi"
+          , "github"    : "krishnasrinivas"
+          , "twitter"   : "nuttydotio"
         }
         , "second": {
             "when"      : "11:45"
           , "name"      : "Flash talks"
           , "talk"      : {
               "title"   : "Speakers"
-            , "abstract" : "You've got 5 to 10 min (max) to present something cool! <a href='mailto:jon@minsh.net'>Contact us</a> for a slot."
+              , "abstract" : "Backbone Cache Management by <a href='http://twitter.com/Bhoomitt'>Bhoomitt</a><br/> Backbone-factory by <a href='http://twitter.com/vikynandha'>vikynandha</a><br/> Awesome Project by <a href='http://twitter.com/ramshreyas'>Ram</a><br/> Ajax linear spinner by <a href='http://twitter.com/threepointone'>Sunil</a></br> Mutation Observer by <a href='http://twitter.com/gnumanth'>Hemanth</a></br>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
@@ -84,16 +176,16 @@
         }
         , "third": {
             "when"      : "12:30"
-          , "name"      : "Krishna Srinivas"
+          , "name"      : "Dhaval Trivedi"
           , "talk"      : {
-              "title"   : "nutty.io"
-            , "abstract" : "Share your console terminal session using just a browser."
+              "title"   : "The Little JavaScripter"
+            , "abstract" : "We're doing it wrong - getting too absorbed into libraries, frameworks, HTML5s, MV*s and all that jazz. Let's take a deep breath and have a moment of reflection. Let us learn to look at JavaScript as a first class programming language, and what we can do using the language alone."
           }
-          , "bio"       : "Coming up."
-          , "pic"       : "./images/speakers/krishna_146x146.jpg"
+          , "bio"       : "Dhaval is Software Development Engineer at Amazon."
+          , "pic"       : "./images/speakers/dhaval_146x146.jpg"
           , "facebook"  : ""
-          , "github"    : "krishnasrinivas"
-          , "twitter"   : "nuttydotio"
+          , "github"    : "dytrivedi"
+          , "twitter"   : "dhavaltrivedi"
         }
       }
     },
