@@ -104,21 +104,24 @@ html
             h2.orange #{cfg.description}
             .left
               span
-                h3.white When
+                h3.white  When
                 - var start = new Date(event.when.start);
                 - var end = new Date(event.when.end);
                 - var current = new Date();
-                h4.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
-                h3.white Where
-                - each a in event.where.address
-                  h4.orange=a
-                h4.orange=event.where.city
-                if current < start
-                  h3.white Grab your ticket today: 
-                  h4.orange 
-                    a(href=event.tickets,target="_blank") #{event.tickets}
+                span#when
+                    h4.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
+
+                h3.white  Where
+                 div#where 
+                    - each a in event.where.address
+                      h4.orange=a 
+                      h4.orange=event.where.city
+                      if current < start
+                        h3.white Grab your ticket today: 
+                        h4.orange 
+                        a(href=event.tickets,target="_blank") #{event.tickets}
             .right
-              span
+              div#map
                 a(href=event.id+'/'+event.where.map)
                   img(src=event.id+'/images/venue/map.png')
                   p Get directions

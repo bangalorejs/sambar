@@ -24,9 +24,7 @@ Sambar helps you create a static web site for your community vertical, i.e., it 
         -o, --outputDir [path]     Output directory
         -f, --force                Force on non-empty directory
 
-Here is how to create the bangalorejs site:
-
-    ./bin/sambar -c examples/bangaloreJS -t templates/bangaloreJS -o site
+Here is how to create the bangalorejs site: `./build.sh`
 
 # Inspiration
   
