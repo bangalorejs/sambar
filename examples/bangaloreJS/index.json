@@ -49,32 +49,17 @@
       , "agenda"      : [
           { "when": "10:30", "what" : "Gathering and light refreshments."}
         , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
-        , { "when": "11:30", "what" : "Short break and networking."}
-        , { "when": "11:45", "what" : "Flash talks by you!"}
-        , { "when": "12:15", "what" : "Short break and networking."}
-        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
+        , { "when": "12:00", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"second"}
         , { "when": "13:00", "what" : "End."}
       ]
       , "speakers"    : {
         "first": {
             "when"      : "11:00"
-          , "name"      : "TBA"
-          , "talk"      : {
-              "title"   : ""
-            , "abstract" : ""
-          }
-          , "bio"       : ""
-          , "pic"       : "./images/speakers/johndoe_146x146.png"
-          , "facebook"  : ""
-          , "github"    : ""
-          , "twitter"   : ""
-        }
-        , "second": {
-            "when"      : "11:45"
           , "name"      : "Flash talks"
           , "talk"      : {
               "title"   : "Speakers"
-              , "abstract" : ""
+            , "abstract" : "Be <a href='http://mean.io'>MEAN</a> at hackathon by <a href='http://twitter.com/devangpaliwal'>Devang</a><br/> Packing Node Modules by <a href='http://twitter.com/gnumanth'>Hemanth</a><br/> <a href='http://warpdrive.io'>WarpDrive</a> hack by <a href='http://twitter.com/bhoomitt'>Bhoomitt</a><br/> Internet TV hack by <a href='http://twitter.com/dmadan86'>Madan</a></br>"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/lightning_146x146.png"
@@ -82,18 +67,18 @@
           , "github"    : ""
           , "twitter"   : ""
         }
-        , "third": {
+        , "second": {
             "when"      : "12:30"
-          , "name"      : "TBA"
+          , "name"      : "Shekhar Gulati"
           , "talk"      : {
-              "title"   : ""
-            , "abstract" : ""
+              "title"   : "Meteor"
+            , "abstract" : "Building a Web App From Scratch in Meteor. More details <a href='https://www.openshift.com/blogs/day-15-meteor-building-a-web-app-from-scratch-in-meteor'>here</a>."
           }
-          , "bio"       : ""
-          , "pic"       : "./images/speakers/johndoe_146x146.png"
+          , "bio"       : "Principal OpenShift Evangelist"
+          , "pic"       : "./images/speakers/shekhar_146x146.jpeg"
           , "facebook"  : ""
-          , "github"    : ""
-          , "twitter"   : ""
+          , "github"    : "shekhargulati"
+          , "twitter"   : "shekhargulati"
         }
       }
     },
