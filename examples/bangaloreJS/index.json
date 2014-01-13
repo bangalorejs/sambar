@@ -1,10 +1,101 @@
 {
     "name"        : "BangaloreJS"
   , "twitter"     : "BangaloreJS"
+  , "ios"         : "794922283"
+  , "android"     : "com.minsh.bjs"
   , "googlegroup" : "bangalorejs"
   , "description" : "Bangalore Javascript Community Meetup"
   , "domain"      : "bangalorejs.org"
   , "events"      : [
+    {
+        "id"      : "eleventh"
+      , "tickets" : "http://bangalorejs11.eventbrite.com"
+      , "when"    : {
+          "start" : "2014/01/25 10:30:00"
+        , "end"   : "2014/01/25 13:30:00"
+      }
+      , "where"   : {
+          "address" : ["Intuit", "building 8 pri tech park RMZ ecospace bellendur Bangalore"]
+        , "city"    : "Bangalore 560 103"
+        , "map"     : "./images/venue/location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Intuit"
+        , "pic"         : {
+            "path"    : "./images/sponsors/intuit.jpeg"
+          , "width"   : "201px"
+          , "height"  : "72px"
+        }
+        , "description" : "Intuit"
+        , "www"         : "http://www.intuit.in"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "partner": {
+          "name"        : "MetaRefresh 2014"
+        , "pic"         : {
+            "path"    : "./images/sponsors/mf.png"
+          , "width"  : "96px"
+          , "height"  : ""
+        }
+        , "www"       : "http://www.metarefresh.in/2014"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering and light refreshments."}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Second talk by ", "speaker_idx":"second"}
+        , { "when": "11:45", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Closing talk by ", "speaker_idx":"third"}
+        , { "when": "13:00", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "Om Shankar"
+          , "talk"      : {
+              "title"   : "Declarative Programming using Underscore"
+          }
+          , "bio"       : "Web Development Engineer at InMobi"
+          , "pic"       : "./images/speakers/om_146x146.png"
+          , "twitter"    : "om_invicible"
+          , "github"    : "omshiv"
+        }
+        , "second": {
+            "when"      : "11:30"
+          , "name"      : "Flash talks"
+          , "talk"      : {
+              "title"   : "Speakers"
+            , "abstract" : "<a href='https://github.com/hemanth/nw-md'>Node Webkit Markdown</a> by <a href='http://twitter.com/gnumanth'>Hemanth</a><br/> <a href='http://t.co/n9CdYuZuUo'>ReactJS sneek peek</a> by <a href='http://twitter.com/jaisanth'>Jai</a><br/> <a href='https://slid.es/jaseemabid/pubsub'>PubSub in 10 minutes</a> by <a href='http://twitter.com/jaseemabid'>Jaseem</a>"
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/lightning_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "third": {
+            "when"      : "12:30"
+          , "name"      : "Sunil Pai"
+          , "talk"      : {
+              "title"   : "Breaking down facebook react's dom diff algorithm"
+            , "abstract" : "Sunil will talk about 2 things:<br/>- a strategy for parallelization of express.js middleware<br/>- breaking down facebook react's dom diff algorithm (and how to leverage it)."
+          }
+          , "bio"       : "UX guy at Mynthra"
+          , "pic"       : "./images/speakers/sunil_146x146.png"
+          , "facebook"  : ""
+          , "github"    : "threepointone"
+          , "twitter"   : "threepointone"
+        }
+      }
+    },
     {
         "id"      : "tenth"
       , "tickets" : "http://bangalorejs10.eventbrite.com"
@@ -35,15 +126,6 @@
           , "height"  : "72px"
         }
         , "www"       : "http://www.minsh.net"
-      }
-      , "support": {
-          "name"        : "HasGeek"
-        , "pic"         : {
-            "path"    : "./images/sponsors/hasgeek.logo.png"
-          , "width"  : "96px"
-          , "height"  : "72px"
-        }
-        , "www"       : "http://www.hasgeek.com"
       }
       , "videos"      : []
       , "agenda"      : [
@@ -112,15 +194,6 @@
           , "height"  : "72px"
         }
         , "www"       : "http://www.minsh.net"
-      }
-      , "support": {
-          "name"        : "HasGeek"
-        , "pic"         : {
-            "path"    : "./images/sponsors/hasgeek.logo.png"
-          , "width"  : "96px"
-          , "height"  : "72px"
-        }
-        , "www"       : "http://www.hasgeek.com"
       }
       , "videos"      : []
       , "agenda"      : [

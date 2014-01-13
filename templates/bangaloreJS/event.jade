@@ -9,7 +9,7 @@ html
     meta(property="og:type",content="website")
     meta(property="og:image",content="http://#{cfg.domain}/images/logo.png")
     meta(property="og:description",content=cfg.description)
-    meta(property="og:url",content="http://#{cfg.domain}/#{event.id}.html") 
+    meta(property="og:url",content="http://#{cfg.domain}/#{event.id}.html")
     meta(property="og:site_name",content=cfg.name)
 
     script
@@ -32,7 +32,7 @@ html
           .navbar-inner
             ul.nav
               - if (cfg.events.length > 6) {
-                - for (var i = 0; i < 5; ++i ) {
+                - for (var i = 0; i < 4; ++i ) {
                   - var v = cfg.events[i];
                   - var vdate = new Date(v.when.start);
                     if (v.id === event.id)
@@ -46,7 +46,7 @@ html
                   a.dropdown-toggle(href='#', data-toggle='dropdown') Archive
                     b.caret
                   ul.dropdown-menu
-                    - for (var i = 5; i < cfg.events.length; ++i) {
+                    - for (var i = 4; i < cfg.events.length; ++i) {
                       - var v = cfg.events[i];
                       - var vdate = new Date(v.when.start);
                       li
@@ -72,17 +72,23 @@ html
               p Hosted by
               a(href=event.sponsor.www,target='_blank')
                 img(height=event.sponsor.pic.height,width=event.sponsor.pic.width,src=event.id+'/'+event.sponsor.pic.path)
+
+      .row.spacer
       .row
-          - if (cfg.twitter)
-            span.twitter
-              a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
-              script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-          -if (cfg.googlegroup)
-            span.googlegroup #{cfg.title} 
-              form.form-horizontal(action='http://groups.google.com/group/'+cfg.googlegroup+'/boxsubscribe')
-                a.element(href="https://groups.google.com/forum/#!forum/"+cfg.googlegroup) Google Group
-                input.element.input-medium(type='text',name='email',placeholder='Your email')
-                input.element.btn.btn-primary.btn-small(type='submit',name="sub",value="Subscribe")
+        .sponsor
+          span.frame
+            - if (cfg.android)
+              span.event_organization
+                p Download BangaloreJS<br/>on Play Store
+                a(href='https://play.google.com/store/apps/details?id='+cfg.android,target='_blank')
+                  img(src=event.id+'/images/playstore.png')
+            - if (cfg.ios)
+              span.event_support
+                p Download BangaloreJS<br/>on App Store
+                a(href='https://itunes.apple.com/us/app/bangalorejs/id'+cfg.ios,target='_blank')
+                  img(src=event.id+'/images/appstore.png')
+      .row.spacer
+
       - if (images.length > 0)
         .row
           .pictures
@@ -93,7 +99,7 @@ html
                   li.first
                     a.thumbnail(href=i.modal,onclick='return showPic("'+cnt+'");')
                       img(src=event.id+'/gallery/'+i.thumbnail)
-                - else 
+                - else
                   li
                     a.thumbnail(href=i.modal,onclick='return showPic("'+cnt+'");')
                       img(src=event.id+'/gallery/'+i.thumbnail)
@@ -109,33 +115,37 @@ html
                 - var end = new Date(event.when.end);
                 - var current = new Date();
                 span#when
-                    h4.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)} 
+                    h4.orange #{dayNames[start.getDay()]}, #{monthNames[start.getMonth()]} #{getDate(start)}, #{start.getHours()}:#{getMinutes(start)}-#{end.getHours()}:#{getMinutes(end)}
 
                 h3.white  Where
-                 div#where 
+                 div#where
                     - each a in event.where.address
-                      h4.orange=a 
+                      h4.orange=a
                       h4.orange=event.where.city
                       if current < start
-                        h3.white Grab your ticket today: 
-                        h4.orange 
+                        h3.white Grab your ticket today:
+                        h4.orange
                         a(href=event.tickets,target="_blank") #{event.tickets}
             .right
               div#map
                 a(href=event.id+'/'+event.where.map)
                   img(src=event.id+'/images/venue/map.png')
                   p Get directions
+
+      .row.spacer
       .row
-        .sponsor
-          span.frame
-            span.event_organization
-              p Organized by
-              a(href=event.organization.www,target='_blank')
-                img(width=event.organization.pic.width,height=event.organization.pic.height,src=event.id+'/'+event.organization.pic.path)
-            span.event_support
-              p Supported by
-              a(href=event.support.www,target='_blank')
-                img(width=event.support.pic.width,height=event.support.pic.height,src=event.id+'/'+event.support.pic.path)
+        - if (cfg.twitter)
+          span.twitter
+            a.twitter-follow-button(href="https://twitter.com/"+cfg.twitter,data-show-count="false",data-size="large") Follow @#{cfg.twitter}
+            script !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+        -if (cfg.googlegroup)
+          span.googlegroup #{cfg.title}
+            form.form-horizontal(action='http://groups.google.com/group/'+cfg.googlegroup+'/boxsubscribe')
+              a.element(href="https://groups.google.com/forum/#!forum/"+cfg.googlegroup) Google Group
+              input.element.input-medium(type='text',name='email',placeholder='Your email')
+              input.element.btn.btn-primary.btn-small(type='submit',name="sub",value="Subscribe")
+      .row.spacer
+
       - if (event.videos && event.videos.length)
         .row
           .videos
@@ -148,7 +158,7 @@ html
                       img(width="338px",height="253px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
                       div
                         img(src="./images/play.png")
-                - else 
+                - else
                   li
                     a.thumbnail(href='http://youtube.com/watch?v='+v,onclick='return showVid("'+v+'");')
                       img(width="338px",height="253px",src="http://img.youtube.com/vi/"+v+"/0.jpg");
@@ -161,9 +171,9 @@ html
             span.frame
               h2 Agenda
               - each v, k in event.agenda
-                p 
+                p
                   h4
-                    #{v.when} - #{v.what}   
+                    #{v.when} - #{v.what}
                     - if (v.speaker_idx)
                       | #{event.speakers[v.speaker_idx].name}.
       - else
@@ -175,9 +185,9 @@ html
         .row
           span.separator
         - each v in event.speakers
-          .row 
+          .row
             .speaker
-              span.frame 
+              span.frame
                 h2 #{v.name}
                 .left
                   span
@@ -220,7 +230,7 @@ html
           .grab_ticket
             span.frame
               span
-                h2 Grab your ticket today: 
+                h2 Grab your ticket today:
                   span
                     a(href=event.tickets,target='_blank') #{event.tickets}
       #pic_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
@@ -233,10 +243,32 @@ html
       #vid_modal.modal(tabindex="-1",role="dialog",aria-labelledby="myModalLabel",aria-hidden="true")
         .modal-body
           #vid_frame
+
       .row.spacer
-      script(src="./js/jquery.min.js") 
-      script(src="./js/bootstrap.min.js") 
-      script(src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js") 
+
+      .row
+        .sponsor
+          span.frame
+            span.event_organization
+              p Organized by
+              a(href=event.organization.www,target='_blank')
+                img(width=event.organization.pic.width,height=event.organization.pic.height,src=event.id+'/'+event.organization.pic.path)
+            - if (event.support)
+              span.event_support
+                p Supported by
+                a(href=event.support.www,target='_blank')
+                  img(width=event.support.pic.width,height=event.support.pic.height,src=event.id+'/'+event.support.pic.path)
+            - if (event.partner)
+              span.event_support
+                p Partner
+                a(href=event.partner.www,target='_blank')
+                  img(width=event.partner.pic.width,height=event.partner.pic.height,src=event.id+'/'+event.partner.pic.path)
+
+      .row.spacer
+
+      script(src="./js/jquery.min.js")
+      script(src="./js/bootstrap.min.js")
+      script(src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js")
       script
         //couldn't avoid these globals
         var images = !{JSON.stringify(images)};

@@ -150,6 +150,7 @@ h2 > span {
 }
 .sponsor .frame .event_organization {
    width:200px;
+   margin-right:100px;
 }
 
 span.googlegroup, span.twitter {
@@ -180,9 +181,10 @@ span.googlegroup .element{
   height: 100%;
 }
 .meetup .left {
-  float   : left;
-  display : table;
-  text-align  : left;
+  float: left;
+  display: table;
+  text-align: left;
+  width:40%;
 }
 .meetup .right {
   float       : right;
