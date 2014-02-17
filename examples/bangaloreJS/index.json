@@ -8,6 +8,111 @@
   , "domain"      : "bangalorejs.org"
   , "events"      : [
     {
+        "id"      : "twelfth"
+      , "tickets" : "http://bangalorejs12.eventbrite.com"
+      , "when"    : {
+          "start" : "2014/02/22 10:30:00"
+        , "end"   : "2014/02/22 14:30:00"
+      }
+      , "where"   : {
+          "address" : ["Amazon India Development Center", "Brigade Gateway, World Trade Center, 6th floor", "26/1, Dr. Rajkumar Road Malleshwaram"]
+        , "city"    : "Bangalore 560 055"
+        , "map"     : "./images/venue/location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Amazon"
+        , "pic"         : {
+            "path"    : "./images/sponsors/amazon.png"
+          , "width"   : "201px"
+          , "height"  : "72px"
+        }
+        , "description" : "Amazon"
+        , "www"         : "http://www.amazon.in"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "partner": {
+          "name"        : "JSChannel"
+        , "pic"         : {
+            "path"    : "./images/sponsors/jschannel.png"
+          , "width"  : "150px"
+          , "height"  : ""
+        }
+        , "www"       : "http://www.jschannel.com"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering"}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Second talk by ", "speaker_idx":"second"}
+        , { "when": "12:00", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Last talk by ", "speaker_idx":"third"}
+        , { "when": "13:00", "what" : "Lunch"}
+        , { "when": "13:30", "what" : "Workshop by ", "speaker_idx":"fourth"}
+        , { "when": "14:40", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "Dr. Neeharika Adabala"
+          , "talk"      : {
+              "title"   : "Graphics in the Browser with WebGL",
+              "abstract": "In this talk I will give a brief introduction to the graphics pipeline. Then I will illustrate how one can implement the various aspects of the graphics pipeline for the web using the Three.js framework."
+          }
+          , "bio"       : "Co-founder of LT Research"
+          , "pic"       : "./images/speakers/neeharika_146x146.gif"
+          , "twitter"    : ""
+          , "github"    : ""
+        }
+        , "second": {
+            "when"      : "11:30"
+          , "name"      : "Flash talks"
+          , "talk"      : {
+              "title"   : "Speakers"
+            , "abstract" : ""
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/lightning_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "third": {
+            "when"      : "12:30"
+          , "name"      : "Yaapa Hage"
+          , "talk"      : {
+              "title"   : "Remote.js - A Web Audio API Hack"
+            , "abstract" : "It is basically going to be a demo on how remote.js was created (300+ stars on GitHub - https://github.com/hacksparrow/remote.js), and how it works.<br/><br/>I will start by giving a brief introduction about the Web Audio API, and show a few interesting demos about its capabilities. Then I will talk about how the idea of remote.js occurred to me, and demo it.<br/><br/>In the later part of the session, I will talk about the more ambitious project I am working on in the same field - file transfer using audible frequencies, and maybe even implementing the TCP/IP protocol using it. After all, files and protocols are just signals. Har har!"
+          }
+          , "bio"       : "Partner at SourceBits"
+          , "pic"       : "./images/speakers/yaapa_146x146.jpg"
+          , "facebook"  : ""
+          , "github"    : "hacksparrow"
+          , "twitter"   : "hacksparrow"
+        }
+        , "fourth": {
+            "when"      : "13:30"
+          , "name"      : "Naresh Sharma"
+          , "talk"      : {
+              "title"   : "AngularJS Workshop"
+            , "abstract" : ""
+          }
+          , "bio"       : "Naresh is organising JSChannel"
+          , "pic"       : "./images/speakers/naresh_146x146.jpg"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : "js_channel"
+        }
+      }
+    },
+    {
         "id"      : "eleventh"
       , "tickets" : "http://bangalorejs11.eventbrite.com"
       , "when"    : {
