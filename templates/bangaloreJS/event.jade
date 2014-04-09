@@ -126,11 +126,12 @@ html
                     h3.white Grab your ticket today:
                     h4.orange
                     a(href=event.tickets,target="_blank") #{event.tickets}
-            .right
-              div#map
-                a(href=event.id+'/'+event.where.map)
-                  img(src=event.id+'/images/venue/map.png')
-                  p Get directions
+            - if (event.where.map)
+              .right
+                div#map
+                  a(href=event.id+'/'+event.where.map)
+                    img(src=event.id+'/images/venue/map.png')
+                    p Get directions
 
       .row.spacer
       .row

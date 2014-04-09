@@ -8,6 +8,86 @@
   , "domain"      : "bangalorejs.org"
   , "events"      : [
     {
+        "id"      : "thirteenth"
+      , "tickets" : "http://bangalorejs13.eventbrite.com"
+      , "when"    : {
+          "start" : "2014/03/29 10:30:00"
+        , "end"   : "2014/03/29 13:00:00"
+      }
+      , "where"   : {
+          "address" : ["Cisco Building #11", "Cessna Business Park Main Rd, Kaverappa Layout", "Kadubeesanahalli"]
+        , "city"    : "Bangalore 560103"
+      }
+      , "sponsor" : {
+          "name"        : "Cisco Systems"
+        , "pic"         : {
+            "path"    : "./images/sponsors/cisco.png"
+          , "width"   : "201px"
+          , "height"  : "72px"
+        }
+        , "description" : "Cisco Systems"
+        , "www"         : "http://www.cisco.com"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.net"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering"}
+        , { "when": "11:00", "what" : "First talk by ", "speaker_idx":"first"}
+        , { "when": "11:30", "what" : "Second talk by ", "speaker_idx":"second"}
+        , { "when": "12:00", "what" : "Short break and networking."}
+        , { "when": "12:30", "what" : "Last talk by ", "speaker_idx":"third"}
+        , { "when": "14:40", "what" : "End."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "Raja Raman"
+          , "talk"      : {
+              "title"   : "Promises - What so great great about them?",
+              "abstract": "This talk is about the promise pattern. What they do? Why you need them? How to get your heads around using them? We will discuss code samples of promises using vanilla Javascript, jQuery and Q libraries. Also, we will touch base on some popular anti-patterns."
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/ram_146x146.jpg"
+          , "twitter"    : "ram0812"
+          , "github"    : "ram0812"
+        }
+        , "second": {
+            "when"      : "11:30"
+          , "name"      : "Flash talks"
+          , "talk"      : {
+              "title"   : "Speakers"
+            , "abstract" : ""
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/lightning_146x146.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "third": {
+            "when"      : "12:30"
+          , "name"      : "Stalin Subramani"
+          , "talk"      : {
+              "title"   : "Controlling Home Appliances via node.js"
+            , "abstract" : "Node.js is the controller which will talk to Arduino board to control home appliances. For the demo, I have an iOS application which will talk to node.js, and node.js sends instruction to Arduino to control the home appliances."
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/stalin_146x146.png"
+          , "facebook"  : ""
+          , "github"    : "stalins"
+          , "twitter"   : "stalinsoft"
+        }
+      }
+    },
+    {
         "id"      : "twelfth"
       , "tickets" : "http://bangalorejs12.eventbrite.com"
       , "when"    : {
