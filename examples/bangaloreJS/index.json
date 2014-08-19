@@ -3,10 +3,92 @@
   , "twitter"     : "BangaloreJS"
   , "ios"         : "794922283"
   , "android"     : "com.minsh.bjs"
+  , "wp"          : "343ca098-f50e-4215-8a17-89f57484eea5"
   , "googlegroup" : "bangalorejs"
   , "description" : "Bangalore Javascript Community Meetup"
   , "domain"      : "bangalorejs.org"
   , "events"      : [
+    {
+        "id"      : "fifteenth"
+      , "tickets" : "http://bangalorejs15.eventbrite.com"
+      , "when"    : {
+          "start" : "2014/08/30 10:30:00"
+        , "end"   : "2014/08/30 13:00:00"
+      }
+      , "where"   : {
+          "address" : ["Swissnex India", "26 Rest House Crescent Road"]
+        , "city"    : "Bangalore 560 001"
+        , "map"     : "./images/venue/swissnex_location.png"
+      }
+      , "sponsor" : {
+          "name"        : "Swissnex India"
+        , "pic"         : {
+            "path"    : "./images/sponsors/swissnex.png"
+          , "width"   : "201px"
+          , "height"  : "72px"
+        }
+        , "description" : "Swissnex is a network of knowledge hubs in Bangalore, Boston, San Francisco, Shanghai and Singapore working closely with science and technology counselors based in Swiss embassies around the world."
+        , "www"         : "http://www.swissnexindia.org"
+      }
+      , "organization": {
+          "name"        : "Minsh"
+        , "pic"         : {
+            "path"    : "./images/sponsors/minsh.logo.png"
+          , "width"   : "72px"
+          , "height"  : "72px"
+        }
+        , "www"       : "http://www.minsh.com"
+      }
+      , "videos"      : []
+      , "agenda"      : [
+          { "when": "10:30", "what" : "Gathering"}
+        , { "when": "11:00", "what" : "", "speaker_idx":"first"}
+        , { "when": "11:40", "what" : "Short break and networking."}
+        , { "when": "12:00", "what" : "", "speaker_idx":"second"}
+        , { "when": "12:40", "what" : "", "speaker_idx":"third"}
+        , { "when": "13:00", "what" : "Foooooooood."}
+      ]
+      , "speakers"    : {
+        "first": {
+            "when"      : "11:00"
+          , "name"      : "Flash Talk Mela Episode I"
+          , "talk"      : {
+              "title"   : "Flash Talk Wars",
+              "abstract": "You've got a topic? You've got the will? You've got the guts?... You've got 10 minutes! (to book a slot, <a href=\"mailto:jon@minsh.net\">contact us</a>)"
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/starwars.png"
+          , "twitter"    : ""
+          , "github"    : ""
+        }
+        , "second": {
+            "when"      : "11:30"
+          , "name"      : "Flash Talk Mela Episode II"
+          , "talk"      : {
+              "title"   : "The Flash Talker Strikes Back"
+            , "abstract" : "Same same  (to book a slot, <a href=\"mailto:jon@minsh.net\">contact us</a>)"
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/empirestrikesback.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+        , "third": {
+            "when"      : "12:30"
+          , "name"      : "Voting"
+          , "talk"      : {
+              "title"   : "The Return of the JavaScripter"
+            , "abstract" : "Time to vote! The best flash talker gets a free BangaloreJS T-shirt!"
+          }
+          , "bio"       : ""
+          , "pic"       : "./images/speakers/returnofthejedi.png"
+          , "facebook"  : ""
+          , "github"    : ""
+          , "twitter"   : ""
+        }
+      }
+    },
     {
         "id"      : "thirteenth"
       , "tickets" : "http://bangalorejs13.eventbrite.com"

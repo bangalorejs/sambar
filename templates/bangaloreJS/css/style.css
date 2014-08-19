@@ -108,6 +108,7 @@ h2 > span {
 .sponsor {
   display           : inline-block;
   width             : 700px;
+  font-size         : 18px;
 }
 .sponsor .left {
   float   : left;
@@ -132,25 +133,31 @@ h2 > span {
   display         : table-cell;
   vertical-align  : middle;
 }
-.sponsor .frame {
+.sponsor .top-frame {
   text-align:center;
 }
-.sponsor .frame > span {
+.sponsor .top-frame > span {
   display:inline-block;
   text-align:center;
   vertical-align:top;
 }
-.sponsor .frame .event_sponsor {
+.sponsor .top-frame .event_sponsor {
    width:200px;
    margin-right:20px;
 }
-.sponsor .frame .event_support {
-   width:200px;
-   margin-right:20px;
+.sponsor .top-frame .app-right {
+   width:180px;
 }
-.sponsor .frame .event_organization {
-   width:200px;
-   margin-right:100px;
+.sponsor .top-frame .app-left {
+   width:180px;
+   margin-right:60px;
+}
+.sponsor .top-frame .app-middle {
+   width:180px;
+   margin-right:60px;
+}
+.sponsor .frame {
+  text-align: center;
 }
 
 span.googlegroup, span.twitter {

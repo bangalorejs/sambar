@@ -76,17 +76,23 @@ html
       .row.spacer
       .row
         .sponsor
-          span.frame
+          div Download BangaloreJS App<br/><br/>
+          span.top-frame
             - if (cfg.android)
-              span.event_organization
-                p Download BangaloreJS<br/>on Play Store
+              span.app-left
+                p on Play Store
                 a(href='https://play.google.com/store/apps/details?id='+cfg.android,target='_blank')
                   img(src=event.id+'/images/playstore.png')
             - if (cfg.ios)
-              span.event_support
-                p Download BangaloreJS<br/>on App Store
+              span.app-middle
+                p on App Store
                 a(href='https://itunes.apple.com/us/app/bangalorejs/id'+cfg.ios,target='_blank')
                   img(src=event.id+'/images/appstore.png')
+            - if (cfg.wp)
+              span.app-right
+                p on WP Store
+                a(href='http://www.windowsphone.com/en-us/store/app/bangalorejs/'+cfg.wp,target='_blank')
+                  img(src=event.id+'/images/windowsphonestore.png')
       .row.spacer
 
       - if (images.length > 0)
