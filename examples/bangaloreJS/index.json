@@ -51,10 +51,10 @@
       , "speakers"    : {
         "first": {
             "when"      : "11:00"
-          , "name"      : "Flash Talk Mela Episode I"
+          , "name"      : "Flash Talk Mela Episode IV"
           , "talk"      : {
               "title"   : "Flash Talk Wars",
-              "abstract": "You've got a topic? You've got the will? You've got the guts?... You've got 10 minutes! (to book a slot, <a href=\"mailto:jon@minsh.net\">contact us</a>)"
+              "abstract": "You've got a topic? You've got the will? You've got the guts?... You've got 10 minutes! (to book a slot, <a href=\"http://bit.ly/1msBkt4\" target=\"_blank\">subscribe here</a>)"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/starwars.png"
@@ -63,10 +63,10 @@
         }
         , "second": {
             "when"      : "11:30"
-          , "name"      : "Flash Talk Mela Episode II"
+          , "name"      : "Flash Talk Mela Episode V"
           , "talk"      : {
               "title"   : "The Flash Talker Strikes Back"
-            , "abstract" : "Same same  (to book a slot, <a href=\"mailto:jon@minsh.net\">contact us</a>)"
+            , "abstract" : "Same same  (to book a slot, <a href=\"http://bit.ly/1msBkt4\" target=\"_blank\">subscribe here</a>)"
           }
           , "bio"       : ""
           , "pic"       : "./images/speakers/empirestrikesback.png"
@@ -76,7 +76,7 @@
         }
         , "third": {
             "when"      : "12:30"
-          , "name"      : "Voting"
+          , "name"      : "Voting (Episode VI)"
           , "talk"      : {
               "title"   : "The Return of the JavaScripter"
             , "abstract" : "Time to vote! The best flash talker gets a free BangaloreJS T-shirt!"
